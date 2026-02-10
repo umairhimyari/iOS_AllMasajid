@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headerblue</key>
+	<string>#1574C8</string>
+	<key>appblue</key>
+	<string>#06a7e2</string>
+	<key>blue</key>
+	<string>#0000FF</string>
+	<key>red</key>
+	<string>#FF0000</string>
+	<key>black</key>
+	<string>#000000</string>
+	<key>white</key>
+	<string>#FFFFFF</string>
+	<key>theme</key>
+	<string>#000000</string>
+	<key>themeSelectedButton</key>
+	<string>#0000FC</string>
+	<key>themeButton</key>
+	<string>#FC0000</string>
+	<key>primary</key>
+	<string>#F0F000</string>
+	<key>secondary</key>
+	<string>#0F0FFF</string>
+	<key>headermenuborder</key>
+	<string>#1d81bf</string>
+	<key>menuborder</key>
+	<string>#1c5494</string>
+</dict>
+</plist>

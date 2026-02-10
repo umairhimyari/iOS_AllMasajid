@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PT_Sans-Web-Bold.ttf">
+            <string>PTSans-Bold</string>
+        </array>
+        <array key="PT_Sans-Web-Italic.ttf">
+            <string>PTSans-Italic</string>
+        </array>
+        <array key="PT_Sans-Web-Regular.ttf">
+            <string>PTSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="UserRequest4DuasTVC" customModule="AllMasajid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-0u-IBy">
+                        <rect key="frame" x="16" y="10" width="288" height="19.5"/>
+                        <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="15"/>
+                        <color key="textColor" red="0.54901960780000003" green="0.76862745099999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body k nkj n kjn jkn kjn kjn kjn kj nkj nkj n kjn kjn kj " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFD-ZQ-RPZ">
+                        <rect key="frame" x="16" y="39.5" width="288" height="36.5"/>
+                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-KN-HDF">
+                        <rect key="frame" x="16" y="124" width="288" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ZlR-9t-8TE"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-KN-1be">
+                        <rect key="frame" x="134" y="86.5" width="60" height="25"/>
+                        <color key="backgroundColor" red="0.35337963700000002" green="0.66461271050000004" blue="0.96783131359999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="GCV-GL-mmG"/>
+                            <constraint firstAttribute="height" constant="25" id="sRH-V6-Pwz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="10"/>
+                        <state key="normal" title="Extend">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry: 11-22-11111" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho9-9I-0Lc">
+                        <rect key="frame" x="16" y="97" width="93" height="14.5"/>
+                        <fontDescription key="fontDescription" name="PTSans-Italic" family="PT Sans" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-Ta-auP">
+                        <rect key="frame" x="204" y="86.5" width="60" height="25"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="CRL-aB-Tcn"/>
+                            <constraint firstAttribute="width" constant="60" id="Iu6-YN-TX8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="10"/>
+                        <state key="normal" title="Remove">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-IX-8ym">
+                        <rect key="frame" x="274" y="84" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="3Kd-4p-miK"/>
+                            <constraint firstAttribute="height" constant="30" id="luT-42-5vt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="10"/>
+                        <state key="normal" image="icon-edit">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="IFD-ZQ-RPZ" secondAttribute="trailing" constant="16" id="3lJ-UA-kjv"/>
+                    <constraint firstItem="IFD-ZQ-RPZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5oB-jb-Rzx"/>
+                    <constraint firstItem="Ho9-9I-0Lc" firstAttribute="bottom" secondItem="gbe-KN-1be" secondAttribute="bottom" id="G3q-nT-pDr"/>
+                    <constraint firstItem="0g8-KN-HDF" firstAttribute="top" secondItem="V7w-IX-8ym" secondAttribute="bottom" constant="10" id="GvU-Jw-Zfj"/>
+                    <constraint firstItem="k4n-0u-IBy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="P22-5J-GAS"/>
+                    <constraint firstItem="k4n-0u-IBy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RT4-Zc-D8M"/>
+                    <constraint firstItem="gbe-KN-1be" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ho9-9I-0Lc" secondAttribute="trailing" constant="5" id="VIa-tN-VxA"/>
+                    <constraint firstItem="Ho9-9I-0Lc" firstAttribute="leading" secondItem="IFD-ZQ-RPZ" secondAttribute="leading" id="XXx-sN-Fi2"/>
+                    <constraint firstItem="aAR-Ta-auP" firstAttribute="centerY" secondItem="V7w-IX-8ym" secondAttribute="centerY" id="YsI-RR-z3o"/>
+                    <constraint firstItem="IFD-ZQ-RPZ" firstAttribute="top" secondItem="k4n-0u-IBy" secondAttribute="bottom" constant="10" id="bSA-l5-fZr"/>
+                    <constraint firstAttribute="bottom" secondItem="0g8-KN-HDF" secondAttribute="bottom" constant="5" id="cg9-Kw-pRu"/>
+                    <constraint firstAttribute="trailing" secondItem="k4n-0u-IBy" secondAttribute="trailing" constant="16" id="dLf-Ei-c7V"/>
+                    <constraint firstItem="V7w-IX-8ym" firstAttribute="leading" secondItem="aAR-Ta-auP" secondAttribute="trailing" constant="10" id="fIi-rS-jyT"/>
+                    <constraint firstItem="aAR-Ta-auP" firstAttribute="leading" secondItem="gbe-KN-1be" secondAttribute="trailing" constant="10" id="jSG-hz-KWm"/>
+                    <constraint firstItem="0g8-KN-HDF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kaz-mL-MRY"/>
+                    <constraint firstItem="gbe-KN-1be" firstAttribute="centerY" secondItem="aAR-Ta-auP" secondAttribute="centerY" id="lBU-YW-al6"/>
+                    <constraint firstAttribute="trailing" secondItem="0g8-KN-HDF" secondAttribute="trailing" constant="16" id="n0s-8J-6lh"/>
+                    <constraint firstAttribute="trailing" secondItem="V7w-IX-8ym" secondAttribute="trailing" constant="16" id="nZw-68-4dt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bodyLBL" destination="IFD-ZQ-RPZ" id="N4O-KZ-nHR"/>
+                <outlet property="editBTN" destination="V7w-IX-8ym" id="Nf3-8P-ts5"/>
+                <outlet property="expiryLBL" destination="Ho9-9I-0Lc" id="d0B-eU-IKy"/>
+                <outlet property="extendBTN" destination="gbe-KN-1be" id="57X-9Y-BGw"/>
+                <outlet property="removeBTN" destination="aAR-Ta-auP" id="UFY-Up-6xp"/>
+                <outlet property="titleLBL" destination="k4n-0u-IBy" id="jfB-TJ-mhM"/>
+            </connections>
+            <point key="canvasLocation" x="237.68115942028987" y="175.44642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon-edit" width="256" height="256"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

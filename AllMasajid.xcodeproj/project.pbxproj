@@ -1,0 +1,2225 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A57F641214C561C004880AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57F640214C561C004880AF /* AppDelegate.swift */; };
+		0A57F643214C561C004880AF /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57F642214C561C004880AF /* PrayerTimesViewController.swift */; };
+		0A57F646214C561C004880AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A57F644214C561C004880AF /* Main.storyboard */; };
+		0A57F648214C5625004880AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A57F647214C5625004880AF /* Assets.xcassets */; };
+		120FF36F2429C6C200803E8A /* ContributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120FF36E2429C6C200803E8A /* ContributeViewController.swift */; };
+		127EA2A124385D5B005F311D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127EA2A024385D5B005F311D /* EventsViewController.swift */; };
+		127EA2A324388A52005F311D /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127EA2A224388A52005F311D /* AddEventViewController.swift */; };
+		1283ADE92439D84F00EEACC8 /* AddAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1283ADE82439D84F00EEACC8 /* AddAnnouncementViewController.swift */; };
+		480AEC692151ADBC00B22BCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC682151ADBB00B22BCB /* LoginViewController.swift */; };
+		480AECAF2151C3A700B22BCB /* AFParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC6C2151C3A700B22BCB /* AFParam.swift */; };
+		480AECB02151C3A700B22BCB /* AFManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC6D2151C3A700B22BCB /* AFManagerProtocol.swift */; };
+		480AECB12151C3A700B22BCB /* AFNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC6E2151C3A700B22BCB /* AFNetwork.swift */; };
+		480AECB22151C3A700B22BCB /* FontManager_iPad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 480AEC712151C3A700B22BCB /* FontManager_iPad.plist */; };
+		480AECB32151C3A700B22BCB /* ColorManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 480AEC722151C3A700B22BCB /* ColorManager.plist */; };
+		480AECB42151C3A700B22BCB /* FontManager_iPad_ar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 480AEC732151C3A700B22BCB /* FontManager_iPad_ar.plist */; };
+		480AECB52151C3A700B22BCB /* FontManager_ar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 480AEC742151C3A700B22BCB /* FontManager_ar.plist */; };
+		480AECB62151C3A700B22BCB /* FontManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 480AEC752151C3A700B22BCB /* FontManager.plist */; };
+		480AECB72151C3A700B22BCB /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC772151C3A700B22BCB /* FontManager.swift */; };
+		480AECB82151C3A700B22BCB /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC782151C3A700B22BCB /* BaseManager.swift */; };
+		480AECBA2151C3A700B22BCB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC7B2151C3A700B22BCB /* Alert.swift */; };
+		480AECBB2151C3A700B22BCB /* DesignUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC7C2151C3A700B22BCB /* DesignUtility.swift */; };
+		480AECBC2151C3A700B22BCB /* DefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC7D2151C3A700B22BCB /* DefaultConfig.swift */; };
+		480AECBD2151C3A700B22BCB /* DeviceUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC7E2151C3A700B22BCB /* DeviceUtility.swift */; };
+		480AECC12151C3A700B22BCB /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC842151C3A700B22BCB /* ViewControllerExtension.swift */; };
+		480AECC22151C3A700B22BCB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC852151C3A700B22BCB /* String+Extensions.swift */; };
+		480AECC32151C3A700B22BCB /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AEC862151C3A700B22BCB /* UtilityExtensions.swift */; };
+		480AECE72151C3A700B22BCB /* BaseLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AECAD2151C3A700B22BCB /* BaseLayoutConstraint.swift */; };
+		480AECE82151C3A700B22BCB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AECAE2151C3A700B22BCB /* Utility.swift */; };
+		480AECF12151DC2600B22BCB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AECF02151DC2600B22BCB /* RegistrationViewController.swift */; };
+		480AECF52155AD5700B22BCB /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480AECF42155AD5700B22BCB /* LandingViewController.swift */; };
+		481C85882210AB2C0042A871 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481C85872210AB2C0042A871 /* LocationManager.swift */; };
+		482566C1225958B500FBC9D3 /* SettingsChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482566C0225958B500FBC9D3 /* SettingsChildTableViewCell.swift */; };
+		482566C5226D2BA400FBC9D3 /* SavedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482566C4226D2BA400FBC9D3 /* SavedLocation.swift */; };
+		488B4A6D2169C04500658776 /* NearbyMasajidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B4A6C2169C04500658776 /* NearbyMasajidViewController.swift */; };
+		488B4A6F2169C0E400658776 /* NearbyMasajidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B4A6E2169C0E400658776 /* NearbyMasajidTableViewCell.swift */; };
+		488B4A712169C1A200658776 /* MasjidItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B4A702169C1A200658776 /* MasjidItem.swift */; };
+		48B34AA1222C58CD00B259F6 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B34AA0222C58CD00B259F6 /* EventCollectionViewCell.swift */; };
+		48B34AA3222C9B2300B259F6 /* QiblaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B34AA2222C9B2300B259F6 /* QiblaViewController.swift */; };
+		48B34AA5222C9C1600B259F6 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B34AA4222C9C1600B259F6 /* CLLocation+Extension.swift */; };
+		48B400E0237E47AC00BC3152 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48B400DF237E47AC00BC3152 /* loader.gif */; };
+		48C45CC321E7D3430013475C /* MyMasajidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C45CC221E7D3430013475C /* MyMasajidViewController.swift */; };
+		48C45CC521E7D41B0013475C /* MyMasajidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C45CC421E7D41B0013475C /* MyMasajidTableViewCell.swift */; };
+		48F323A6214E2072002703B0 /* PrayerTimesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F323A5214E2072002703B0 /* PrayerTimesTableViewCell.swift */; };
+		48F45486227E57B400100F10 /* DegreeAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F45485227E57B400100F10 /* DegreeAlertViewController.swift */; };
+		48FEA32C218129B400E63D67 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEA32B218129B400E63D67 /* SettingsTableViewCell.swift */; };
+		48FEA32E21812A3800E63D67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEA32D21812A3800E63D67 /* SettingsViewController.swift */; };
+		48FEA3352181489000E63D67 /* PT_Sans-Narrow-Web-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA333218140EB00E63D67 /* PT_Sans-Narrow-Web-Bold.ttf */; };
+		48FEA3362181489200E63D67 /* PT_Sans-Narrow-Web-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA334218140EC00E63D67 /* PT_Sans-Narrow-Web-Regular.ttf */; };
+		48FEA3372181489800E63D67 /* PT_Sans-Web-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA32F218140D700E63D67 /* PT_Sans-Web-Bold.ttf */; };
+		48FEA3382181489800E63D67 /* PT_Sans-Web-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA332218140DC00E63D67 /* PT_Sans-Web-BoldItalic.ttf */; };
+		48FEA3392181489800E63D67 /* PT_Sans-Web-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA331218140DB00E63D67 /* PT_Sans-Web-Italic.ttf */; };
+		48FEA33A2181489800E63D67 /* PT_Sans-Web-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48FEA330218140D900E63D67 /* PT_Sans-Web-Regular.ttf */; };
+		48FEA33E21814FBA00E63D67 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEA33D21814FBA00E63D67 /* MenuTableViewCell.swift */; };
+		529667452A65B359000F8BC2 /* PreLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529667442A65B359000F8BC2 /* PreLoginVC.swift */; };
+		5296674C2A65B419000F8BC2 /* AppleAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529667482A65B419000F8BC2 /* AppleAccount.swift */; };
+		5296674D2A65B419000F8BC2 /* AppleUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529667492A65B419000F8BC2 /* AppleUserInfo.swift */; };
+		5296674E2A65B419000F8BC2 /* FacebookAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296674A2A65B419000F8BC2 /* FacebookAccount.swift */; };
+		5296674F2A65B419000F8BC2 /* GoogleAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296674B2A65B419000F8BC2 /* GoogleAccount.swift */; };
+		52B5EDFE2D6BC40600511D5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52B5EDFC2D6BC40600511D5A /* README.md */; };
+		52B5EDFF2D6BC40600511D5A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 52B5EDFB2D6BC40600511D5A /* LICENSE */; };
+		52B5EE002D6BC40600511D5A /* Adhan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5EDF72D6BC40600511D5A /* Adhan.swift */; };
+		52B5EE012D6BC40600511D5A /* AdhanObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5EDF82D6BC40600511D5A /* AdhanObjc.swift */; };
+		880100B429C79EAD001E4F64 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880100B329C79EAD001E4F64 /* Verse.swift */; };
+		880100B629C79EC4001E4F64 /* ChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880100B529C79EC4001E4F64 /* ChapterModel.swift */; };
+		880100B829C7A072001E4F64 /* ChaptersListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880100B729C7A072001E4F64 /* ChaptersListingVC.swift */; };
+		880100BA29C7A083001E4F64 /* ChapterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880100B929C7A083001E4F64 /* ChapterDetailVC.swift */; };
+		8802456425FB8EBA0051232A /* OrganizationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8802456225FB8EBA0051232A /* OrganizationsTVC.swift */; };
+		8802456525FB8EBA0051232A /* OrganizationsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8802456325FB8EBA0051232A /* OrganizationsTVC.xib */; };
+		8809E658245082500021EB67 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8809E657245082500021EB67 /* Authentication.storyboard */; };
+		8809E65C2450834C0021EB67 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8809E65B2450834C0021EB67 /* Event.storyboard */; };
+		8809E66024508B860021EB67 /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8809E65F24508B860021EB67 /* Announcements.storyboard */; };
+		8809E66524508D9C0021EB67 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8809E66424508D9C0021EB67 /* Settings.storyboard */; };
+		8809E66924508E7E0021EB67 /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8809E66824508E7E0021EB67 /* Options.storyboard */; };
+		8809E66E245091640021EB67 /* StoryBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809E66D245091640021EB67 /* StoryBoardExtension.swift */; };
+		880C01562587FD08001F221F /* NoInternetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C01552587FD08001F221F /* NoInternetVC.swift */; };
+		880C01592587FFFF001F221F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C01582587FFFF001F221F /* Reachability.swift */; };
+		881087312548D2400050873A /* AnnouncementsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881087302548D2400050873A /* AnnouncementsNewVC.swift */; };
+		88125EDE25AC656400693FFC /* RefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88125EDD25AC656400693FFC /* RefreshProtocol.swift */; };
+		881C393D25FDEE7900079E9C /* OrganizationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C393C25FDEE7900079E9C /* OrganizationsModel.swift */; };
+		881C93B4256C215300CC9430 /* JummahIqamahVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C93B3256C215300CC9430 /* JummahIqamahVC.swift */; };
+		881FC7FE24ACEB2000F4BAC5 /* DuasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FC7FD24ACEB2000F4BAC5 /* DuasModel.swift */; };
+		8821AA332525165B00EEDC21 /* MyEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821AA312525165B00EEDC21 /* MyEventsTVC.swift */; };
+		8821AA342525165B00EEDC21 /* MyEventsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8821AA322525165B00EEDC21 /* MyEventsTVC.xib */; };
+		88282214258E7F4A00404507 /* SideMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88282213258E7F4A00404507 /* SideMenuProtocol.swift */; };
+		88282217258E7F7700404507 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88282216258E7F7700404507 /* SideMenuVC.swift */; };
+		8828221C258E814600404507 /* SideMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828221A258E814600404507 /* SideMenuTVC.swift */; };
+		8828221D258E814600404507 /* SideMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8828221B258E814600404507 /* SideMenuTVC.xib */; };
+		88303B8D271C0AF60021B950 /* SmartNotifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88303B8C271C0AF60021B950 /* SmartNotifications.storyboard */; };
+		88303B8F271C0EA30021B950 /* SmartNotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303B8E271C0EA30021B950 /* SmartNotificationsVC.swift */; };
+		88303B91271C0F940021B950 /* NotificationsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303B90271C0F940021B950 /* NotificationsListVC.swift */; };
+		88303B95271C100B0021B950 /* NotificationsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303B93271C100B0021B950 /* NotificationsListTVC.swift */; };
+		88303B96271C100B0021B950 /* NotificationsListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88303B94271C100B0021B950 /* NotificationsListTVC.xib */; };
+		88303B9A271C1A850021B950 /* MuslimDirectory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88303B99271C1A850021B950 /* MuslimDirectory.storyboard */; };
+		88303B9C271C1AE40021B950 /* MuslimDirectoyHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303B9B271C1AE40021B950 /* MuslimDirectoyHomeVC.swift */; };
+		88303B9E271C1B430021B950 /* MDBusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303B9D271C1B430021B950 /* MDBusinessVC.swift */; };
+		88329BBF2470367400D51C0F /* EventTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88329BBD2470367400D51C0F /* EventTVC.swift */; };
+		88329BC02470367400D51C0F /* EventTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88329BBE2470367400D51C0F /* EventTVC.xib */; };
+		8833ECC12487EE2E0062F31C /* AnnounementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ECC02487EE2E0062F31C /* AnnounementsModel.swift */; };
+		883F588A25F9576E0087592C /* OrganizationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F588925F9576E0087592C /* OrganizationsVC.swift */; };
+		88407A642577A90800C84569 /* DisplayIqamahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88407A632577A90800C84569 /* DisplayIqamahModel.swift */; };
+		88407A672577AE0C00C84569 /* IqamahJummahDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88407A662577AE0C00C84569 /* IqamahJummahDisplayModel.swift */; };
+		88407A712577AF1700C84569 /* DisplayIqamahBottomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88407A6F2577AF1700C84569 /* DisplayIqamahBottomTVC.swift */; };
+		88407A722577AF1700C84569 /* DisplayIqamahBottomTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88407A702577AF1700C84569 /* DisplayIqamahBottomTVC.xib */; };
+		884121A3267DBF1F00606D6E /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884121A2267DBF1F00606D6E /* SplashScreenVC.swift */; };
+		884121A5267DBF3600606D6E /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884121A4267DBF3600606D6E /* SplashScreen.storyboard */; };
+		8846181D246854EA0050CB96 /* MyMasajidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846181C246854EA0050CB96 /* MyMasajidModel.swift */; };
+		88464E0E29C852690082DB47 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88464E0D29C852690082DB47 /* BaseVC.swift */; };
+		88464E1029C8539F0082DB47 /* Juzs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88464E0F29C8539F0082DB47 /* Juzs.swift */; };
+		88464E1329C85E4B0082DB47 /* Quran.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88464E1229C85E4B0082DB47 /* Quran.storyboard */; };
+		88464E1729C864B30082DB47 /* QuranChaptersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88464E1529C864B30082DB47 /* QuranChaptersListTVC.swift */; };
+		88464E1829C864B30082DB47 /* QuranChaptersListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88464E1629C864B30082DB47 /* QuranChaptersListTVC.xib */; };
+		88464E1D29C86CDC0082DB47 /* VerseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88464E1B29C86CDC0082DB47 /* VerseTVC.swift */; };
+		88464E1E29C86CDC0082DB47 /* VerseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88464E1C29C86CDC0082DB47 /* VerseTVC.xib */; };
+		88483F8025DD364D00F51B19 /* How2UseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88483F7F25DD364D00F51B19 /* How2UseCategoryVC.swift */; };
+		88483F8425DD365F00F51B19 /* How2UseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88483F8325DD365F00F51B19 /* How2UseDetailVC.swift */; };
+		88483F8725DD37D600F51B19 /* How2UseCategoriesDataBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88483F8625DD37D600F51B19 /* How2UseCategoriesDataBank.swift */; };
+		884860EB24AB8F3A00C7EFB9 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884860EA24AB8F3900C7EFB9 /* GetImage.swift */; };
+		884B19252496846600679773 /* ThreeDotProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884B19242496846600679773 /* ThreeDotProtocol.swift */; };
+		884E642B2585F7A200D2004C /* ThreeDotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E642A2585F7A200D2004C /* ThreeDotVC.swift */; };
+		884E64302585F86700D2004C /* ThreeDotTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E642E2585F86700D2004C /* ThreeDotTVC.swift */; };
+		884E64312585F86700D2004C /* ThreeDotTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884E642F2585F86700D2004C /* ThreeDotTVC.xib */; };
+		884E64342585FDBD00D2004C /* ThreeDotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E64332585FDBD00D2004C /* ThreeDotModel.swift */; };
+		88519A8A2459D1E100235AC9 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519A892459D1E100235AC9 /* ForgetPasswordVC.swift */; };
+		885269E425D68BE6005B00BB /* FeedaNeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885269E325D68BE6005B00BB /* FeedaNeed.storyboard */; };
+		885269E725D68C5F005B00BB /* FanSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885269E625D68C5F005B00BB /* FanSelectionVC.swift */; };
+		885269EC25D697C2005B00BB /* MasajidTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885269EA25D697C2005B00BB /* MasajidTVC.swift */; };
+		885269ED25D697C2005B00BB /* MasajidTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885269EB25D697C2005B00BB /* MasajidTVC.xib */; };
+		885269F125D69A5F005B00BB /* FanMasajidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885269F025D69A5F005B00BB /* FanMasajidVC.swift */; };
+		885269F425D6AC07005B00BB /* FanInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885269F325D6AC07005B00BB /* FanInformationVC.swift */; };
+		88592DBC28D8E4AA00D55203 /* Occasions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88592DBB28D8E4AA00D55203 /* Occasions.storyboard */; };
+		88592DC028D8EA0900D55203 /* RamadanSpecialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88592DBF28D8EA0900D55203 /* RamadanSpecialVC.swift */; };
+		88592DC228D8ECDC00D55203 /* SelectableOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88592DC128D8ECDC00D55203 /* SelectableOptionsVC.swift */; };
+		88592DC428D8ECFE00D55203 /* OptionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88592DC328D8ECFE00D55203 /* OptionDetailVC.swift */; };
+		885D779525E6954100FD919A /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D779425E6954100FD919A /* PaymentVC.swift */; };
+		885FE1F025A33DAE00C23231 /* Request4DuasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FE1EF25A33DAE00C23231 /* Request4DuasVC.swift */; };
+		885FE1F325A33DC700C23231 /* AddDuaRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FE1F225A33DC700C23231 /* AddDuaRequestVC.swift */; };
+		885FE1F625A33FE800C23231 /* DuaAppealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FE1F525A33FE800C23231 /* DuaAppealsModel.swift */; };
+		8862E3D92581829D00A33F41 /* 1_MUHAMMADI_QURANIC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8862E3D82581829D00A33F41 /* 1_MUHAMMADI_QURANIC.ttf */; };
+		8864CBA02459F59E003D069D /* APIRequestUtil .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864CB9E2459F59E003D069D /* APIRequestUtil .swift */; };
+		8864CBA12459F59E003D069D /* APIResponseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864CB9F2459F59E003D069D /* APIResponseUtil.swift */; };
+		886A7437259D01DE00221D15 /* ContributeWithTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A7436259D01DE00221D15 /* ContributeWithTimeVC.swift */; };
+		886A743A259D042500221D15 /* InterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A7439259D042500221D15 /* InterestModel.swift */; };
+		886CE8A125A3B41900DE2B83 /* Request4DuaDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CE8A025A3B41900DE2B83 /* Request4DuaDetailsVC.swift */; };
+		88756EE8271C3D5100BA3674 /* MDCategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88756EE6271C3D5100BA3674 /* MDCategoriesCVC.swift */; };
+		88756EE9271C3D5100BA3674 /* MDCategoriesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88756EE7271C3D5100BA3674 /* MDCategoriesCVC.xib */; };
+		88756EED271C4ACF00BA3674 /* MDItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88756EEB271C4ACF00BA3674 /* MDItemTVC.swift */; };
+		88756EEE271C4ACF00BA3674 /* MDItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88756EEC271C4ACF00BA3674 /* MDItemTVC.xib */; };
+		887B934729C4BB6C00B668C3 /* CommonApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B934629C4BB6C00B668C3 /* CommonApiResponse.swift */; };
+		887F95182638014500775A02 /* PhoneVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F95172638014500775A02 /* PhoneVerificationVC.swift */; };
+		8881D2B1259F254700FB0005 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881D2B0259F254700FB0005 /* WebViewVC.swift */; };
+		88826EB2249FBF0D00D8AC4F /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88826EB1249FBF0D00D8AC4F /* EventDetailVC.swift */; };
+		88826EB4249FBF1F00D8AC4F /* AnnouncementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88826EB3249FBF1F00D8AC4F /* AnnouncementDetailVC.swift */; };
+		888490D0271C7B070062F72F /* MDPopSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888490CF271C7B070062F72F /* MDPopSheetVC.swift */; };
+		88870797251F8D07000A0844 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88870796251F8D07000A0844 /* CornerRadius.swift */; };
+		88870799251F9812000A0844 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88870798251F9812000A0844 /* LocationDelegate.swift */; };
+		8887079B251F9863000A0844 /* DynamicGridProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887079A251F9863000A0844 /* DynamicGridProtocol.swift */; };
+		8887079D251F98AD000A0844 /* ReloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887079C251F98AD000A0844 /* ReloadProtocol.swift */; };
+		8887079F251F98ED000A0844 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887079E251F98ED000A0844 /* SettingsProtocol.swift */; };
+		888DE26425751E7800125503 /* DisplayIqamahVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE26325751E7800125503 /* DisplayIqamahVC.swift */; };
+		888DE2692575211000125503 /* DisplayIqamahTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE2672575211000125503 /* DisplayIqamahTVC.swift */; };
+		888DE26A2575211000125503 /* DisplayIqamahTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888DE2682575211000125503 /* DisplayIqamahTVC.xib */; };
+		8894A4E224EA94D300857FE9 /* Contribute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8894A4E124EA94D300857FE9 /* Contribute.storyboard */; };
+		8894A4E524EA952300857FE9 /* ContributeWithSkillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894A4E424EA952200857FE9 /* ContributeWithSkillsVC.swift */; };
+		8894A4E724EA959200857FE9 /* ContributeWithMoneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894A4E624EA959200857FE9 /* ContributeWithMoneyVC.swift */; };
+		8895151C25DE8DEF0020D506 /* How2UseAppCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895151A25DE8DEF0020D506 /* How2UseAppCVC.swift */; };
+		8895151D25DE8DEF0020D506 /* How2UseAppCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895151B25DE8DEF0020D506 /* How2UseAppCVC.xib */; };
+		88951F552518F55C005F5F92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88951F542518F55C005F5F92 /* GoogleService-Info.plist */; };
+		8899C83D253AD6F100D17924 /* Iqamah.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899C83C253AD6F100D17924 /* Iqamah.storyboard */; };
+		8899C83F253AD7FC00D17924 /* IqamahVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C83E253AD7FC00D17924 /* IqamahVC.swift */; };
+		8899C843253AD92100D17924 /* IqamahTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C841253AD92100D17924 /* IqamahTVC.swift */; };
+		8899C844253AD92100D17924 /* IqamahTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8899C842253AD92100D17924 /* IqamahTVC.xib */; };
+		889C1E6D25A868C700FE3B5D /* IslamicCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889C1E6C25A868C700FE3B5D /* IslamicCalendar.storyboard */; };
+		889C1E7025A8692100FE3B5D /* IslamicCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C1E6F25A8692100FE3B5D /* IslamicCalendarVC.swift */; };
+		889E639B257AC59F00E15280 /* SettingsSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6399257AC59F00E15280 /* SettingsSectionTVC.swift */; };
+		889E639C257AC59F00E15280 /* SettingsSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889E639A257AC59F00E15280 /* SettingsSectionTVC.xib */; };
+		889E63A1257AC75E00E15280 /* SettingsCellTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E639F257AC75E00E15280 /* SettingsCellTVC.swift */; };
+		889E63A2257AC75E00E15280 /* SettingsCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889E63A0257AC75E00E15280 /* SettingsCellTVC.xib */; };
+		889E63A8257ACD8A00E15280 /* ConfigureIqamahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E63A7257ACD8A00E15280 /* ConfigureIqamahModel.swift */; };
+		889E63AB257AD58900E15280 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E63AA257AD58900E15280 /* GlobalFunctions.swift */; };
+		889E63AE257AD93800E15280 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E63AD257AD93800E15280 /* GlobalVariables.swift */; };
+		88A721CD24CF4358008E28F2 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A721CC24CF4358008E28F2 /* ChangePasswordVC.swift */; };
+		88A800572541FED500A2BD8F /* IqamahMaghribTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A800552541FED500A2BD8F /* IqamahMaghribTVC.swift */; };
+		88A800582541FED500A2BD8F /* IqamahMaghribTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A800562541FED500A2BD8F /* IqamahMaghribTVC.xib */; };
+		88AAA89424CCAD1500B0E7C0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AAA89324CCAD1500B0E7C0 /* ProfileVC.swift */; };
+		88ADFEDC25A3AC8700D1D5EC /* Request4DuasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADFEDA25A3AC8700D1D5EC /* Request4DuasTVC.swift */; };
+		88ADFEDD25A3AC8700D1D5EC /* Request4DuasTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ADFEDB25A3AC8700D1D5EC /* Request4DuasTVC.xib */; };
+		88AE474E2598D8AC004C2A69 /* SkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE474D2598D8AC004C2A69 /* SkillsModel.swift */; };
+		88AFC842254EE7B800C3A720 /* IqamahNearByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFC841254EE7B800C3A720 /* IqamahNearByModel.swift */; };
+		88B121C524CC9C640043DAC5 /* FavouriteDuasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B121C424CC9C640043DAC5 /* FavouriteDuasVC.swift */; };
+		88B4848528DB7AEB00836FDC /* BenefitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4848428DB7AEB00836FDC /* BenefitsModel.swift */; };
+		88B4848728DB818F00836FDC /* HadithModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4848628DB818F00836FDC /* HadithModel.swift */; };
+		88B4848B28DB843E00836FDC /* SimpleTextTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4848928DB843E00836FDC /* SimpleTextTVC.swift */; };
+		88B4848C28DB843E00836FDC /* SimpleTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B4848A28DB843E00836FDC /* SimpleTextTVC.xib */; };
+		88B6CA07251F687400E00335 /* WhiteFastingDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6CA06251F687400E00335 /* WhiteFastingDaysModel.swift */; };
+		88BD58BA26382FFE005A15C3 /* HTUDataBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD58B926382FFE005A15C3 /* HTUDataBank.swift */; };
+		88BF2A6925B5A23F0039BE1D /* ICPrayerTimesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF2A6825B5A23F0039BE1D /* ICPrayerTimesVC.swift */; };
+		88BF2A6C25B5A3690039BE1D /* ICPrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF2A6B25B5A3690039BE1D /* ICPrayerTimes.swift */; };
+		88BF2A7125B5ACF40039BE1D /* ICPrayerTimesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF2A6F25B5ACF40039BE1D /* ICPrayerTimesTVC.swift */; };
+		88BF2A7225B5ACF40039BE1D /* ICPrayerTimesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BF2A7025B5ACF40039BE1D /* ICPrayerTimesTVC.xib */; };
+		88C02072245B242E00A9D893 /* Faq.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C02071245B242E00A9D893 /* Faq.storyboard */; };
+		88C02075245B248F00A9D893 /* faqVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C02074245B248F00A9D893 /* faqVC.swift */; };
+		88C02077245B24A300A9D893 /* faqDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C02076245B24A300A9D893 /* faqDetailVC.swift */; };
+		88C0207B245B27C400A9D893 /* FaqTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C02079245B27C400A9D893 /* FaqTVC.swift */; };
+		88C0207C245B27C400A9D893 /* FaqTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C0207A245B27C400A9D893 /* FaqTVC.xib */; };
+		88C2B08D24CF53B40008C96E /* VeriftyOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C2B08C24CF53B40008C96E /* VeriftyOtpVC.swift */; };
+		88C8A6BA246AB6CD008F2F1E /* FaqsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C8A6B9246AB6CD008F2F1E /* FaqsModel.swift */; };
+		88C931A7248D3B41007CC2A4 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C931A6248D3B41007CC2A4 /* EventsModel.swift */; };
+		88CE8476253F38E2001FBC3F /* IqamahConfigureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE8475253F38E2001FBC3F /* IqamahConfigureVC.swift */; };
+		88CE847A253F3C98001FBC3F /* IqamahConfigureTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE8478253F3C98001FBC3F /* IqamahConfigureTVC.swift */; };
+		88CE847B253F3C98001FBC3F /* IqamahConfigureTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CE8479253F3C98001FBC3F /* IqamahConfigureTVC.xib */; };
+		88CE847F253F5E2F001FBC3F /* IqamahConfigureBottomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE847D253F5E2F001FBC3F /* IqamahConfigureBottomTVC.swift */; };
+		88CE8480253F5E2F001FBC3F /* IqamahConfigureBottomTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CE847E253F5E2F001FBC3F /* IqamahConfigureBottomTVC.xib */; };
+		88CED54524769729006EE627 /* AnnouncementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CED54424769729006EE627 /* AnnouncementsVC.swift */; };
+		88D67E7D25545FE800E30519 /* SingleDuaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D67E7C25545FE800E30519 /* SingleDuaVC.swift */; };
+		88D67E81255460FF00E30519 /* SingleDuaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D67E7F255460FF00E30519 /* SingleDuaTVC.swift */; };
+		88D67E82255460FF00E30519 /* SingleDuaTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D67E80255460FF00E30519 /* SingleDuaTVC.xib */; };
+		88D8DDE625DBD4F900A97542 /* FanRegisterMasjidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D8DDE525DBD4F900A97542 /* FanRegisterMasjidVC.swift */; };
+		88DBB05025FBF61700B7BC32 /* AddNonMasajidAnnouncementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBB04F25FBF61700B7BC32 /* AddNonMasajidAnnouncementVC.swift */; };
+		88DD9E6C25F94E5500F38CC7 /* AddNonMasjidEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD9E6B25F94E5500F38CC7 /* AddNonMasjidEventVC.swift */; };
+		88DD9E6F25F9506E00F38CC7 /* AddOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD9E6E25F9506E00F38CC7 /* AddOptionVC.swift */; };
+		88DE1D8825B361E70041E86A /* HolidaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE1D8725B361E70041E86A /* HolidaysVC.swift */; };
+		88DE1D8D25B363950041E86A /* ICHolidaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE1D8B25B363950041E86A /* ICHolidaysTVC.swift */; };
+		88DE1D8E25B363950041E86A /* ICHolidaysTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DE1D8C25B363950041E86A /* ICHolidaysTVC.xib */; };
+		88E577BB24DD902A00C94BFF /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E577BA24DD902A00C94BFF /* EditProfileVC.swift */; };
+		88ECCA4125BA908C00B8B71D /* VerificationSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECCA4025BA908C00B8B71D /* VerificationSuccessVC.swift */; };
+		88ECCA4425BA915E00B8B71D /* GoBackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECCA4325BA915E00B8B71D /* GoBackProtocol.swift */; };
+		88EF6C7125B76EBC002F4342 /* UserRequest4DuasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF6C6F25B76EBC002F4342 /* UserRequest4DuasTVC.swift */; };
+		88EF6C7225B76EBC002F4342 /* UserRequest4DuasTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EF6C7025B76EBC002F4342 /* UserRequest4DuasTVC.xib */; };
+		88F00D3525B855B100E393AA /* TryAgainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F00D3425B855B100E393AA /* TryAgainVC.swift */; };
+		88F00D3825B8564F00E393AA /* TryAgainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F00D3725B8564F00E393AA /* TryAgainProtocol.swift */; };
+		88F9AECB25B060170085EE61 /* IslamicCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9AECA25B060170085EE61 /* IslamicCalendarModel.swift */; };
+		88FC308C24ACD71500018DEC /* DailyDuasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC308A24ACD71500018DEC /* DailyDuasTVC.swift */; };
+		88FC308D24ACD71500018DEC /* DailyDuasTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC308B24ACD71500018DEC /* DailyDuasTVC.xib */; };
+		88FC309024ACD95B00018DEC /* DailyDuasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC308F24ACD95B00018DEC /* DailyDuasVC.swift */; };
+		88FC309224ACD9C000018DEC /* Duas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FC309124ACD9C000018DEC /* Duas.storyboard */; };
+		88FC309424ACDF2700018DEC /* DailyDuasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC309324ACDF2700018DEC /* DailyDuasModel.swift */; };
+		88FC309624ACE63C00018DEC /* DuasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC309524ACE63C00018DEC /* DuasVC.swift */; };
+		88FC309A24ACE7AC00018DEC /* DuasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC309824ACE7AC00018DEC /* DuasTVC.swift */; };
+		88FC309B24ACE7AC00018DEC /* DuasTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC309924ACE7AC00018DEC /* DuasTVC.xib */; };
+		88FE172F251F2C4100ACEC55 /* EventsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE172E251F2C4100ACEC55 /* EventsNewVC.swift */; };
+		95BBF951CD71092FD1CE0498 /* Pods_AllMasajid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1091BDA3FF13F542223A462 /* Pods_AllMasajid.framework */; };
+		A01F368323CC14BA00402C04 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01F368223CC14BA00402C04 /* LoadingViewController.swift */; };
+		A0497EA823B37CC80059BA3B /* DynamicGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0497EA723B37CC80059BA3B /* DynamicGridLayout.swift */; };
+		A0497EAA23B3B22D0059BA3B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0497EA923B3B22D0059BA3B /* MainCell.swift */; };
+		A0641DB023AF7A8E009120AE /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0641DAF23AF7A8E009120AE /* FeedbackViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A57F63D214C561C004880AF /* AllMasajid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllMasajid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A57F640214C561C004880AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A57F642214C561C004880AF /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
+		0A57F645214C561C004880AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A57F647214C5625004880AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A57F64C214C5625004880AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A57F655214C5626004880AF /* AllMasajidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMasajidTests.swift; sourceTree = "<group>"; };
+		0A57F657214C5626004880AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A57F660214C5626004880AF /* AllMasajidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMasajidUITests.swift; sourceTree = "<group>"; };
+		0A57F662214C5626004880AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120FF36E2429C6C200803E8A /* ContributeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeViewController.swift; sourceTree = "<group>"; };
+		127EA2A024385D5B005F311D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		127EA2A224388A52005F311D /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		1283ADE82439D84F00EEACC8 /* AddAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnnouncementViewController.swift; sourceTree = "<group>"; };
+		480AEC682151ADBB00B22BCB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		480AEC6C2151C3A700B22BCB /* AFParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFParam.swift; sourceTree = "<group>"; };
+		480AEC6D2151C3A700B22BCB /* AFManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFManagerProtocol.swift; sourceTree = "<group>"; };
+		480AEC6E2151C3A700B22BCB /* AFNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNetwork.swift; sourceTree = "<group>"; };
+		480AEC712151C3A700B22BCB /* FontManager_iPad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FontManager_iPad.plist; sourceTree = "<group>"; };
+		480AEC722151C3A700B22BCB /* ColorManager.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorManager.plist; sourceTree = "<group>"; };
+		480AEC732151C3A700B22BCB /* FontManager_iPad_ar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FontManager_iPad_ar.plist; sourceTree = "<group>"; };
+		480AEC742151C3A700B22BCB /* FontManager_ar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FontManager_ar.plist; sourceTree = "<group>"; };
+		480AEC752151C3A700B22BCB /* FontManager.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FontManager.plist; sourceTree = "<group>"; };
+		480AEC772151C3A700B22BCB /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		480AEC782151C3A700B22BCB /* BaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		480AEC7B2151C3A700B22BCB /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		480AEC7C2151C3A700B22BCB /* DesignUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignUtility.swift; sourceTree = "<group>"; };
+		480AEC7D2151C3A700B22BCB /* DefaultConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultConfig.swift; sourceTree = "<group>"; };
+		480AEC7E2151C3A700B22BCB /* DeviceUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUtility.swift; sourceTree = "<group>"; };
+		480AEC842151C3A700B22BCB /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		480AEC852151C3A700B22BCB /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		480AEC862151C3A700B22BCB /* UtilityExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
+		480AECAD2151C3A700B22BCB /* BaseLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLayoutConstraint.swift; sourceTree = "<group>"; };
+		480AECAE2151C3A700B22BCB /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		480AECF02151DC2600B22BCB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		480AECF42155AD5700B22BCB /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		481C85872210AB2C0042A871 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		482566C0225958B500FBC9D3 /* SettingsChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChildTableViewCell.swift; sourceTree = "<group>"; };
+		482566C4226D2BA400FBC9D3 /* SavedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocation.swift; sourceTree = "<group>"; };
+		488B4A6C2169C04500658776 /* NearbyMasajidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyMasajidViewController.swift; sourceTree = "<group>"; };
+		488B4A6E2169C0E400658776 /* NearbyMasajidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyMasajidTableViewCell.swift; sourceTree = "<group>"; };
+		488B4A702169C1A200658776 /* MasjidItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasjidItem.swift; sourceTree = "<group>"; };
+		48B34AA0222C58CD00B259F6 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		48B34AA2222C9B2300B259F6 /* QiblaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiblaViewController.swift; sourceTree = "<group>"; };
+		48B34AA4222C9C1600B259F6 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
+		48B400DF237E47AC00BC3152 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
+		48C45CC221E7D3430013475C /* MyMasajidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMasajidViewController.swift; sourceTree = "<group>"; };
+		48C45CC421E7D41B0013475C /* MyMasajidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMasajidTableViewCell.swift; sourceTree = "<group>"; };
+		48F323A5214E2072002703B0 /* PrayerTimesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesTableViewCell.swift; sourceTree = "<group>"; };
+		48F45485227E57B400100F10 /* DegreeAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DegreeAlertViewController.swift; sourceTree = "<group>"; };
+		48FEA32B218129B400E63D67 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		48FEA32D21812A3800E63D67 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		48FEA32F218140D700E63D67 /* PT_Sans-Web-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Web-Bold.ttf"; sourceTree = "<group>"; };
+		48FEA330218140D900E63D67 /* PT_Sans-Web-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Web-Regular.ttf"; sourceTree = "<group>"; };
+		48FEA331218140DB00E63D67 /* PT_Sans-Web-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Web-Italic.ttf"; sourceTree = "<group>"; };
+		48FEA332218140DC00E63D67 /* PT_Sans-Web-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Web-BoldItalic.ttf"; sourceTree = "<group>"; };
+		48FEA333218140EB00E63D67 /* PT_Sans-Narrow-Web-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Narrow-Web-Bold.ttf"; sourceTree = "<group>"; };
+		48FEA334218140EC00E63D67 /* PT_Sans-Narrow-Web-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Sans-Narrow-Web-Regular.ttf"; sourceTree = "<group>"; };
+		48FEA33D21814FBA00E63D67 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		529667442A65B359000F8BC2 /* PreLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginVC.swift; sourceTree = "<group>"; };
+		529667482A65B419000F8BC2 /* AppleAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleAccount.swift; sourceTree = "<group>"; };
+		529667492A65B419000F8BC2 /* AppleUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleUserInfo.swift; sourceTree = "<group>"; };
+		5296674A2A65B419000F8BC2 /* FacebookAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAccount.swift; sourceTree = "<group>"; };
+		5296674B2A65B419000F8BC2 /* GoogleAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAccount.swift; sourceTree = "<group>"; };
+		52B5EDF72D6BC40600511D5A /* Adhan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adhan.swift; sourceTree = "<group>"; };
+		52B5EDF82D6BC40600511D5A /* AdhanObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdhanObjc.swift; sourceTree = "<group>"; };
+		52B5EDFB2D6BC40600511D5A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		52B5EDFC2D6BC40600511D5A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5759B9E094B05AEE8BA0F3A5 /* Pods-AllMasajid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllMasajid.release.xcconfig"; path = "Target Support Files/Pods-AllMasajid/Pods-AllMasajid.release.xcconfig"; sourceTree = "<group>"; };
+		880100B329C79EAD001E4F64 /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
+		880100B529C79EC4001E4F64 /* ChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModel.swift; sourceTree = "<group>"; };
+		880100B729C7A072001E4F64 /* ChaptersListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersListingVC.swift; sourceTree = "<group>"; };
+		880100B929C7A083001E4F64 /* ChapterDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetailVC.swift; sourceTree = "<group>"; };
+		8802456225FB8EBA0051232A /* OrganizationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsTVC.swift; sourceTree = "<group>"; };
+		8802456325FB8EBA0051232A /* OrganizationsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrganizationsTVC.xib; sourceTree = "<group>"; };
+		8809E657245082500021EB67 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		8809E65B2450834C0021EB67 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		8809E65F24508B860021EB67 /* Announcements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Announcements.storyboard; sourceTree = "<group>"; };
+		8809E66424508D9C0021EB67 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		8809E66824508E7E0021EB67 /* Options.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Options.storyboard; sourceTree = "<group>"; };
+		8809E66D245091640021EB67 /* StoryBoardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardExtension.swift; sourceTree = "<group>"; };
+		880C01552587FD08001F221F /* NoInternetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetVC.swift; sourceTree = "<group>"; };
+		880C01582587FFFF001F221F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		881087302548D2400050873A /* AnnouncementsNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsNewVC.swift; sourceTree = "<group>"; };
+		88125EDD25AC656400693FFC /* RefreshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshProtocol.swift; sourceTree = "<group>"; };
+		881C393C25FDEE7900079E9C /* OrganizationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsModel.swift; sourceTree = "<group>"; };
+		881C93B3256C215300CC9430 /* JummahIqamahVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JummahIqamahVC.swift; sourceTree = "<group>"; };
+		881FC7FD24ACEB2000F4BAC5 /* DuasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuasModel.swift; sourceTree = "<group>"; };
+		8821AA312525165B00EEDC21 /* MyEventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTVC.swift; sourceTree = "<group>"; };
+		8821AA322525165B00EEDC21 /* MyEventsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventsTVC.xib; sourceTree = "<group>"; };
+		88282213258E7F4A00404507 /* SideMenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuProtocol.swift; sourceTree = "<group>"; };
+		88282216258E7F7700404507 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		8828221A258E814600404507 /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
+		8828221B258E814600404507 /* SideMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTVC.xib; sourceTree = "<group>"; };
+		88303B8C271C0AF60021B950 /* SmartNotifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SmartNotifications.storyboard; sourceTree = "<group>"; };
+		88303B8E271C0EA30021B950 /* SmartNotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartNotificationsVC.swift; sourceTree = "<group>"; };
+		88303B90271C0F940021B950 /* NotificationsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListVC.swift; sourceTree = "<group>"; };
+		88303B93271C100B0021B950 /* NotificationsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListTVC.swift; sourceTree = "<group>"; };
+		88303B94271C100B0021B950 /* NotificationsListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsListTVC.xib; sourceTree = "<group>"; };
+		88303B99271C1A850021B950 /* MuslimDirectory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MuslimDirectory.storyboard; sourceTree = "<group>"; };
+		88303B9B271C1AE40021B950 /* MuslimDirectoyHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimDirectoyHomeVC.swift; sourceTree = "<group>"; };
+		88303B9D271C1B430021B950 /* MDBusinessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDBusinessVC.swift; sourceTree = "<group>"; };
+		88329BBD2470367400D51C0F /* EventTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTVC.swift; sourceTree = "<group>"; };
+		88329BBE2470367400D51C0F /* EventTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTVC.xib; sourceTree = "<group>"; };
+		8833ECC02487EE2E0062F31C /* AnnounementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounementsModel.swift; sourceTree = "<group>"; };
+		883F588925F9576E0087592C /* OrganizationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsVC.swift; sourceTree = "<group>"; };
+		88407A632577A90800C84569 /* DisplayIqamahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIqamahModel.swift; sourceTree = "<group>"; };
+		88407A662577AE0C00C84569 /* IqamahJummahDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahJummahDisplayModel.swift; sourceTree = "<group>"; };
+		88407A6F2577AF1700C84569 /* DisplayIqamahBottomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIqamahBottomTVC.swift; sourceTree = "<group>"; };
+		88407A702577AF1700C84569 /* DisplayIqamahBottomTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayIqamahBottomTVC.xib; sourceTree = "<group>"; };
+		884121A2267DBF1F00606D6E /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
+		884121A4267DBF3600606D6E /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		8846181C246854EA0050CB96 /* MyMasajidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMasajidModel.swift; sourceTree = "<group>"; };
+		88464E0D29C852690082DB47 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		88464E0F29C8539F0082DB47 /* Juzs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juzs.swift; sourceTree = "<group>"; };
+		88464E1229C85E4B0082DB47 /* Quran.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quran.storyboard; sourceTree = "<group>"; };
+		88464E1529C864B30082DB47 /* QuranChaptersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranChaptersListTVC.swift; sourceTree = "<group>"; };
+		88464E1629C864B30082DB47 /* QuranChaptersListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranChaptersListTVC.xib; sourceTree = "<group>"; };
+		88464E1B29C86CDC0082DB47 /* VerseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseTVC.swift; sourceTree = "<group>"; };
+		88464E1C29C86CDC0082DB47 /* VerseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerseTVC.xib; sourceTree = "<group>"; };
+		88483F7F25DD364D00F51B19 /* How2UseCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How2UseCategoryVC.swift; sourceTree = "<group>"; };
+		88483F8325DD365F00F51B19 /* How2UseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How2UseDetailVC.swift; sourceTree = "<group>"; };
+		88483F8625DD37D600F51B19 /* How2UseCategoriesDataBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How2UseCategoriesDataBank.swift; sourceTree = "<group>"; };
+		884860EA24AB8F3900C7EFB9 /* GetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
+		884B19242496846600679773 /* ThreeDotProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotProtocol.swift; sourceTree = "<group>"; };
+		884E642A2585F7A200D2004C /* ThreeDotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotVC.swift; sourceTree = "<group>"; };
+		884E642E2585F86700D2004C /* ThreeDotTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotTVC.swift; sourceTree = "<group>"; };
+		884E642F2585F86700D2004C /* ThreeDotTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDotTVC.xib; sourceTree = "<group>"; };
+		884E64332585FDBD00D2004C /* ThreeDotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotModel.swift; sourceTree = "<group>"; };
+		88519A892459D1E100235AC9 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		885269E325D68BE6005B00BB /* FeedaNeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedaNeed.storyboard; sourceTree = "<group>"; };
+		885269E625D68C5F005B00BB /* FanSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanSelectionVC.swift; sourceTree = "<group>"; };
+		885269EA25D697C2005B00BB /* MasajidTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasajidTVC.swift; sourceTree = "<group>"; };
+		885269EB25D697C2005B00BB /* MasajidTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasajidTVC.xib; sourceTree = "<group>"; };
+		885269F025D69A5F005B00BB /* FanMasajidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanMasajidVC.swift; sourceTree = "<group>"; };
+		885269F325D6AC07005B00BB /* FanInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanInformationVC.swift; sourceTree = "<group>"; };
+		88592DBB28D8E4AA00D55203 /* Occasions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Occasions.storyboard; sourceTree = "<group>"; };
+		88592DBF28D8EA0900D55203 /* RamadanSpecialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamadanSpecialVC.swift; sourceTree = "<group>"; };
+		88592DC128D8ECDC00D55203 /* SelectableOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableOptionsVC.swift; sourceTree = "<group>"; };
+		88592DC328D8ECFE00D55203 /* OptionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDetailVC.swift; sourceTree = "<group>"; };
+		885D779425E6954100FD919A /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		885FE1EF25A33DAE00C23231 /* Request4DuasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request4DuasVC.swift; sourceTree = "<group>"; };
+		885FE1F225A33DC700C23231 /* AddDuaRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDuaRequestVC.swift; sourceTree = "<group>"; };
+		885FE1F525A33FE800C23231 /* DuaAppealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuaAppealsModel.swift; sourceTree = "<group>"; };
+		8862E3D82581829D00A33F41 /* 1_MUHAMMADI_QURANIC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1_MUHAMMADI_QURANIC.ttf; sourceTree = "<group>"; };
+		8864CB9E2459F59E003D069D /* APIRequestUtil .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIRequestUtil .swift"; sourceTree = "<group>"; };
+		8864CB9F2459F59E003D069D /* APIResponseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseUtil.swift; sourceTree = "<group>"; };
+		886A7436259D01DE00221D15 /* ContributeWithTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeWithTimeVC.swift; sourceTree = "<group>"; };
+		886A7439259D042500221D15 /* InterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestModel.swift; sourceTree = "<group>"; };
+		886CE8A025A3B41900DE2B83 /* Request4DuaDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request4DuaDetailsVC.swift; sourceTree = "<group>"; };
+		88756EE6271C3D5100BA3674 /* MDCategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCategoriesCVC.swift; sourceTree = "<group>"; };
+		88756EE7271C3D5100BA3674 /* MDCategoriesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDCategoriesCVC.xib; sourceTree = "<group>"; };
+		88756EEB271C4ACF00BA3674 /* MDItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDItemTVC.swift; sourceTree = "<group>"; };
+		88756EEC271C4ACF00BA3674 /* MDItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MDItemTVC.xib; sourceTree = "<group>"; };
+		887B934629C4BB6C00B668C3 /* CommonApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonApiResponse.swift; sourceTree = "<group>"; };
+		887F95172638014500775A02 /* PhoneVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationVC.swift; sourceTree = "<group>"; };
+		8881D2B0259F254700FB0005 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		88826EB1249FBF0D00D8AC4F /* EventDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailVC.swift; sourceTree = "<group>"; };
+		88826EB3249FBF1F00D8AC4F /* AnnouncementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailVC.swift; sourceTree = "<group>"; };
+		888490CF271C7B070062F72F /* MDPopSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPopSheetVC.swift; sourceTree = "<group>"; };
+		88870796251F8D07000A0844 /* CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		88870798251F9812000A0844 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		8887079A251F9863000A0844 /* DynamicGridProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGridProtocol.swift; sourceTree = "<group>"; };
+		8887079C251F98AD000A0844 /* ReloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadProtocol.swift; sourceTree = "<group>"; };
+		8887079E251F98ED000A0844 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
+		888DE26325751E7800125503 /* DisplayIqamahVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIqamahVC.swift; sourceTree = "<group>"; };
+		888DE2672575211000125503 /* DisplayIqamahTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIqamahTVC.swift; sourceTree = "<group>"; };
+		888DE2682575211000125503 /* DisplayIqamahTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayIqamahTVC.xib; sourceTree = "<group>"; };
+		8894A4E124EA94D300857FE9 /* Contribute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contribute.storyboard; sourceTree = "<group>"; };
+		8894A4E424EA952200857FE9 /* ContributeWithSkillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeWithSkillsVC.swift; sourceTree = "<group>"; };
+		8894A4E624EA959200857FE9 /* ContributeWithMoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeWithMoneyVC.swift; sourceTree = "<group>"; };
+		8895151A25DE8DEF0020D506 /* How2UseAppCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How2UseAppCVC.swift; sourceTree = "<group>"; };
+		8895151B25DE8DEF0020D506 /* How2UseAppCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = How2UseAppCVC.xib; sourceTree = "<group>"; };
+		88951F542518F55C005F5F92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88951F562518F801005F5F92 /* AllMasajid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AllMasajid.entitlements; sourceTree = "<group>"; };
+		8899C83C253AD6F100D17924 /* Iqamah.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Iqamah.storyboard; sourceTree = "<group>"; };
+		8899C83E253AD7FC00D17924 /* IqamahVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahVC.swift; sourceTree = "<group>"; };
+		8899C841253AD92100D17924 /* IqamahTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahTVC.swift; sourceTree = "<group>"; };
+		8899C842253AD92100D17924 /* IqamahTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IqamahTVC.xib; sourceTree = "<group>"; };
+		889C1E6C25A868C700FE3B5D /* IslamicCalendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IslamicCalendar.storyboard; sourceTree = "<group>"; };
+		889C1E6F25A8692100FE3B5D /* IslamicCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslamicCalendarVC.swift; sourceTree = "<group>"; };
+		889E6399257AC59F00E15280 /* SettingsSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionTVC.swift; sourceTree = "<group>"; };
+		889E639A257AC59F00E15280 /* SettingsSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSectionTVC.xib; sourceTree = "<group>"; };
+		889E639F257AC75E00E15280 /* SettingsCellTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellTVC.swift; sourceTree = "<group>"; };
+		889E63A0257AC75E00E15280 /* SettingsCellTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCellTVC.xib; sourceTree = "<group>"; };
+		889E63A7257ACD8A00E15280 /* ConfigureIqamahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureIqamahModel.swift; sourceTree = "<group>"; };
+		889E63AA257AD58900E15280 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		889E63AD257AD93800E15280 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		88A721CC24CF4358008E28F2 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		88A800552541FED500A2BD8F /* IqamahMaghribTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahMaghribTVC.swift; sourceTree = "<group>"; };
+		88A800562541FED500A2BD8F /* IqamahMaghribTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IqamahMaghribTVC.xib; sourceTree = "<group>"; };
+		88AAA89324CCAD1500B0E7C0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		88ADFEDA25A3AC8700D1D5EC /* Request4DuasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request4DuasTVC.swift; sourceTree = "<group>"; };
+		88ADFEDB25A3AC8700D1D5EC /* Request4DuasTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Request4DuasTVC.xib; sourceTree = "<group>"; };
+		88AE474D2598D8AC004C2A69 /* SkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsModel.swift; sourceTree = "<group>"; };
+		88AFC841254EE7B800C3A720 /* IqamahNearByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahNearByModel.swift; sourceTree = "<group>"; };
+		88B121C424CC9C640043DAC5 /* FavouriteDuasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDuasVC.swift; sourceTree = "<group>"; };
+		88B4848428DB7AEB00836FDC /* BenefitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsModel.swift; sourceTree = "<group>"; };
+		88B4848628DB818F00836FDC /* HadithModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HadithModel.swift; sourceTree = "<group>"; };
+		88B4848928DB843E00836FDC /* SimpleTextTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextTVC.swift; sourceTree = "<group>"; };
+		88B4848A28DB843E00836FDC /* SimpleTextTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTextTVC.xib; sourceTree = "<group>"; };
+		88B6CA06251F687400E00335 /* WhiteFastingDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteFastingDaysModel.swift; sourceTree = "<group>"; };
+		88BD58B926382FFE005A15C3 /* HTUDataBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTUDataBank.swift; sourceTree = "<group>"; };
+		88BF2A6825B5A23F0039BE1D /* ICPrayerTimesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICPrayerTimesVC.swift; sourceTree = "<group>"; };
+		88BF2A6B25B5A3690039BE1D /* ICPrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICPrayerTimes.swift; sourceTree = "<group>"; };
+		88BF2A6F25B5ACF40039BE1D /* ICPrayerTimesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICPrayerTimesTVC.swift; sourceTree = "<group>"; };
+		88BF2A7025B5ACF40039BE1D /* ICPrayerTimesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICPrayerTimesTVC.xib; sourceTree = "<group>"; };
+		88C02071245B242E00A9D893 /* Faq.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Faq.storyboard; sourceTree = "<group>"; };
+		88C02074245B248F00A9D893 /* faqVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faqVC.swift; sourceTree = "<group>"; };
+		88C02076245B24A300A9D893 /* faqDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faqDetailVC.swift; sourceTree = "<group>"; };
+		88C02079245B27C400A9D893 /* FaqTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqTVC.swift; sourceTree = "<group>"; };
+		88C0207A245B27C400A9D893 /* FaqTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqTVC.xib; sourceTree = "<group>"; };
+		88C2B08C24CF53B40008C96E /* VeriftyOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeriftyOtpVC.swift; sourceTree = "<group>"; };
+		88C8A6B9246AB6CD008F2F1E /* FaqsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqsModel.swift; sourceTree = "<group>"; };
+		88C931A6248D3B41007CC2A4 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		88CE8475253F38E2001FBC3F /* IqamahConfigureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahConfigureVC.swift; sourceTree = "<group>"; };
+		88CE8478253F3C98001FBC3F /* IqamahConfigureTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahConfigureTVC.swift; sourceTree = "<group>"; };
+		88CE8479253F3C98001FBC3F /* IqamahConfigureTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IqamahConfigureTVC.xib; sourceTree = "<group>"; };
+		88CE847D253F5E2F001FBC3F /* IqamahConfigureBottomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqamahConfigureBottomTVC.swift; sourceTree = "<group>"; };
+		88CE847E253F5E2F001FBC3F /* IqamahConfigureBottomTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IqamahConfigureBottomTVC.xib; sourceTree = "<group>"; };
+		88CED54424769729006EE627 /* AnnouncementsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsVC.swift; sourceTree = "<group>"; };
+		88D67E7C25545FE800E30519 /* SingleDuaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDuaVC.swift; sourceTree = "<group>"; };
+		88D67E7F255460FF00E30519 /* SingleDuaTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDuaTVC.swift; sourceTree = "<group>"; };
+		88D67E80255460FF00E30519 /* SingleDuaTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleDuaTVC.xib; sourceTree = "<group>"; };
+		88D8DDE525DBD4F900A97542 /* FanRegisterMasjidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanRegisterMasjidVC.swift; sourceTree = "<group>"; };
+		88DBB04F25FBF61700B7BC32 /* AddNonMasajidAnnouncementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNonMasajidAnnouncementVC.swift; sourceTree = "<group>"; };
+		88DD9E6B25F94E5500F38CC7 /* AddNonMasjidEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNonMasjidEventVC.swift; sourceTree = "<group>"; };
+		88DD9E6E25F9506E00F38CC7 /* AddOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOptionVC.swift; sourceTree = "<group>"; };
+		88DE1D8725B361E70041E86A /* HolidaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysVC.swift; sourceTree = "<group>"; };
+		88DE1D8B25B363950041E86A /* ICHolidaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICHolidaysTVC.swift; sourceTree = "<group>"; };
+		88DE1D8C25B363950041E86A /* ICHolidaysTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICHolidaysTVC.xib; sourceTree = "<group>"; };
+		88E577BA24DD902A00C94BFF /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		88ECCA4025BA908C00B8B71D /* VerificationSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationSuccessVC.swift; sourceTree = "<group>"; };
+		88ECCA4325BA915E00B8B71D /* GoBackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBackProtocol.swift; sourceTree = "<group>"; };
+		88EF6C6F25B76EBC002F4342 /* UserRequest4DuasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest4DuasTVC.swift; sourceTree = "<group>"; };
+		88EF6C7025B76EBC002F4342 /* UserRequest4DuasTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRequest4DuasTVC.xib; sourceTree = "<group>"; };
+		88F00D3425B855B100E393AA /* TryAgainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainVC.swift; sourceTree = "<group>"; };
+		88F00D3725B8564F00E393AA /* TryAgainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainProtocol.swift; sourceTree = "<group>"; };
+		88F9AECA25B060170085EE61 /* IslamicCalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslamicCalendarModel.swift; sourceTree = "<group>"; };
+		88FC308A24ACD71500018DEC /* DailyDuasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDuasTVC.swift; sourceTree = "<group>"; };
+		88FC308B24ACD71500018DEC /* DailyDuasTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyDuasTVC.xib; sourceTree = "<group>"; };
+		88FC308F24ACD95B00018DEC /* DailyDuasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDuasVC.swift; sourceTree = "<group>"; };
+		88FC309124ACD9C000018DEC /* Duas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Duas.storyboard; sourceTree = "<group>"; };
+		88FC309324ACDF2700018DEC /* DailyDuasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDuasModel.swift; sourceTree = "<group>"; };
+		88FC309524ACE63C00018DEC /* DuasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuasVC.swift; sourceTree = "<group>"; };
+		88FC309824ACE7AC00018DEC /* DuasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuasTVC.swift; sourceTree = "<group>"; };
+		88FC309924ACE7AC00018DEC /* DuasTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DuasTVC.xib; sourceTree = "<group>"; };
+		88FE172E251F2C4100ACEC55 /* EventsNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNewVC.swift; sourceTree = "<group>"; };
+		A01F368223CC14BA00402C04 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A0497EA723B37CC80059BA3B /* DynamicGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicGridLayout.swift; sourceTree = "<group>"; };
+		A0497EA923B3B22D0059BA3B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		A0641DAF23AF7A8E009120AE /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		B1350931D27633BF3431D69B /* Pods-AllMasajid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllMasajid.debug.xcconfig"; path = "Target Support Files/Pods-AllMasajid/Pods-AllMasajid.debug.xcconfig"; sourceTree = "<group>"; };
+		F1091BDA3FF13F542223A462 /* Pods_AllMasajid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllMasajid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A57F63A214C561C004880AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BBF951CD71092FD1CE0498 /* Pods_AllMasajid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A57F634214C561C004880AF = {
+			isa = PBXGroup;
+			children = (
+				0A57F63F214C561C004880AF /* AllMasajid */,
+				0A57F654214C5626004880AF /* AllMasajidTests */,
+				0A57F65F214C5626004880AF /* AllMasajidUITests */,
+				0A57F63E214C561C004880AF /* Products */,
+				25AFEAE324E76C912FD12B62 /* Pods */,
+				C394B1651A3E2F938D17DAA9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A57F63E214C561C004880AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F63D214C561C004880AF /* AllMasajid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A57F63F214C561C004880AF /* AllMasajid */ = {
+			isa = PBXGroup;
+			children = (
+				52B5EDF62D6BC3F300511D5A /* Libraries */,
+				88951F562518F801005F5F92 /* AllMasajid.entitlements */,
+				8809E6512450801F0021EB67 /* Application */,
+				8809E652245081870021EB67 /* Helpers */,
+				480AECEB2151C3DB00B22BCB /* Model */,
+				480AEC6A2151C3A700B22BCB /* Network */,
+				480AECE92151C3C000B22BCB /* Controllers */,
+				8809E64E24507FDE0021EB67 /* View */,
+				8809E64F24507FFD0021EB67 /* Assets */,
+				0A57F64C214C5625004880AF /* Info.plist */,
+				88951F542518F55C005F5F92 /* GoogleService-Info.plist */,
+			);
+			path = AllMasajid;
+			sourceTree = "<group>";
+		};
+		0A57F654214C5626004880AF /* AllMasajidTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F655214C5626004880AF /* AllMasajidTests.swift */,
+				0A57F657214C5626004880AF /* Info.plist */,
+			);
+			path = AllMasajidTests;
+			sourceTree = "<group>";
+		};
+		0A57F65F214C5626004880AF /* AllMasajidUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F660214C5626004880AF /* AllMasajidUITests.swift */,
+				0A57F662214C5626004880AF /* Info.plist */,
+			);
+			path = AllMasajidUITests;
+			sourceTree = "<group>";
+		};
+		25AFEAE324E76C912FD12B62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1350931D27633BF3431D69B /* Pods-AllMasajid.debug.xcconfig */,
+				5759B9E094B05AEE8BA0F3A5 /* Pods-AllMasajid.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		480AEC6A2151C3A700B22BCB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				884860EA24AB8F3900C7EFB9 /* GetImage.swift */,
+				480AEC6B2151C3A700B22BCB /* AlamofireWrapper */,
+				8864CB9E2459F59E003D069D /* APIRequestUtil .swift */,
+				8864CB9F2459F59E003D069D /* APIResponseUtil.swift */,
+				887B934629C4BB6C00B668C3 /* CommonApiResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		480AEC6B2151C3A700B22BCB /* AlamofireWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC6C2151C3A700B22BCB /* AFParam.swift */,
+				480AEC6D2151C3A700B22BCB /* AFManagerProtocol.swift */,
+				480AEC6E2151C3A700B22BCB /* AFNetwork.swift */,
+			);
+			path = AlamofireWrapper;
+			sourceTree = "<group>";
+		};
+		480AEC6F2151C3A700B22BCB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				481C85872210AB2C0042A871 /* LocationManager.swift */,
+				48B34AA4222C9C1600B259F6 /* CLLocation+Extension.swift */,
+				480AEC702151C3A700B22BCB /* Plists */,
+				480AEC762151C3A700B22BCB /* Managers */,
+				480AEC7A2151C3A700B22BCB /* Utils */,
+				480AEC812151C3A700B22BCB /* Extensions */,
+				480AEC9C2151C3A700B22BCB /* Protocols */,
+				480AECAC2151C3A700B22BCB /* Helpers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		480AEC702151C3A700B22BCB /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC712151C3A700B22BCB /* FontManager_iPad.plist */,
+				480AEC722151C3A700B22BCB /* ColorManager.plist */,
+				480AEC732151C3A700B22BCB /* FontManager_iPad_ar.plist */,
+				480AEC742151C3A700B22BCB /* FontManager_ar.plist */,
+				480AEC752151C3A700B22BCB /* FontManager.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		480AEC762151C3A700B22BCB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC772151C3A700B22BCB /* FontManager.swift */,
+				480AEC782151C3A700B22BCB /* BaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		480AEC7A2151C3A700B22BCB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC7B2151C3A700B22BCB /* Alert.swift */,
+				480AEC7C2151C3A700B22BCB /* DesignUtility.swift */,
+				480AEC7D2151C3A700B22BCB /* DefaultConfig.swift */,
+				480AEC7E2151C3A700B22BCB /* DeviceUtility.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		480AEC812151C3A700B22BCB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC842151C3A700B22BCB /* ViewControllerExtension.swift */,
+				480AEC852151C3A700B22BCB /* String+Extensions.swift */,
+				480AEC862151C3A700B22BCB /* UtilityExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		480AEC9C2151C3A700B22BCB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				884B19242496846600679773 /* ThreeDotProtocol.swift */,
+				88870798251F9812000A0844 /* LocationDelegate.swift */,
+				8887079A251F9863000A0844 /* DynamicGridProtocol.swift */,
+				8887079C251F98AD000A0844 /* ReloadProtocol.swift */,
+				8887079E251F98ED000A0844 /* SettingsProtocol.swift */,
+				88282213258E7F4A00404507 /* SideMenuProtocol.swift */,
+				88125EDD25AC656400693FFC /* RefreshProtocol.swift */,
+				88F00D3725B8564F00E393AA /* TryAgainProtocol.swift */,
+				88ECCA4325BA915E00B8B71D /* GoBackProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		480AECAC2151C3A700B22BCB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0497EA723B37CC80059BA3B /* DynamicGridLayout.swift */,
+				480AECAD2151C3A700B22BCB /* BaseLayoutConstraint.swift */,
+				480AECAE2151C3A700B22BCB /* Utility.swift */,
+				889E63AA257AD58900E15280 /* GlobalFunctions.swift */,
+				880C01582587FFFF001F221F /* Reachability.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		480AECE92151C3C000B22BCB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				880100B129C79E7D001E4F64 /* AlQuran */,
+				884121A1267DBEF400606D6E /* SplashScreen */,
+				8809E659245082B90021EB67 /* Authentication */,
+				8809E66C24508F070021EB67 /* Main */,
+				8809E66A24508EE00021EB67 /* Options */,
+				8809E65D2450884C0021EB67 /* Event */,
+				8809E66124508C460021EB67 /* Announcement */,
+				8809E66624508DFD0021EB67 /* Settings */,
+				88AAA89224CCACFF00B0E7C0 /* Profile */,
+				88C02073245B246D00A9D893 /* FAQ */,
+				88FC308E24ACD92E00018DEC /* Duas */,
+				8894A4E324EA950000857FE9 /* Contribute */,
+				88303B8A271C0AB60021B950 /* SmartNotifications */,
+				88303B97271C1A560021B950 /* MuslimDirectory */,
+				8899C83A253AD6B900D17924 /* Iqamah */,
+				889C1E4D25A8688600FE3B5D /* IslamicCalendar */,
+				885269E125D68B9D005B00BB /* Feed A Need */,
+				88592DBD28D8E9E000D55203 /* Occasions */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		480AECEA2151C3D400B22BCB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88B4848828DB83FC00836FDC /* SimpleTextTVC */,
+				88756EE4271C3D2900BA3674 /* MuslimDirectory */,
+				88303B92271C0FE60021B950 /* NotificationsListTVC */,
+				8895151925DE8DCC0020D506 /* How2UseAppCVC */,
+				885269E925D697A6005B00BB /* MasajidTVC */,
+				88BF2A6E25B5ACDD0039BE1D /* ICPrayerTimesTVC */,
+				88DE1D8A25B3636A0041E86A /* ICHolidaysTVC */,
+				88282219258E812200404507 /* SideMenuTVC */,
+				884E642D2585F84900D2004C /* ThreeDotTVC */,
+				889E6396257AC54A00E15280 /* Settings */,
+				88407A6A2577AEAE00C84569 /* Iqamah */,
+				88407A6B2577AEC200C84569 /* Duas */,
+				88407A6D2577AED200C84569 /* EventAnnouncements */,
+				88C02078245B27A600A9D893 /* FAQ Primary */,
+				8802456725FB8EC10051232A /* OrganizationsTVC */,
+				48F323A5214E2072002703B0 /* PrayerTimesTableViewCell.swift */,
+				488B4A6E2169C0E400658776 /* NearbyMasajidTableViewCell.swift */,
+				48FEA32B218129B400E63D67 /* SettingsTableViewCell.swift */,
+				48FEA33D21814FBA00E63D67 /* MenuTableViewCell.swift */,
+				48C45CC421E7D41B0013475C /* MyMasajidTableViewCell.swift */,
+				48B34AA0222C58CD00B259F6 /* EventCollectionViewCell.swift */,
+				482566C0225958B500FBC9D3 /* SettingsChildTableViewCell.swift */,
+				A0497EA923B3B22D0059BA3B /* MainCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		480AECEB2151C3DB00B22BCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				880100B229C79E8D001E4F64 /* AlQuran */,
+				488B4A702169C1A200658776 /* MasjidItem.swift */,
+				482566C4226D2BA400FBC9D3 /* SavedLocation.swift */,
+				8846181C246854EA0050CB96 /* MyMasajidModel.swift */,
+				88C8A6B9246AB6CD008F2F1E /* FaqsModel.swift */,
+				8833ECC02487EE2E0062F31C /* AnnounementsModel.swift */,
+				88C931A6248D3B41007CC2A4 /* EventsModel.swift */,
+				88FC309324ACDF2700018DEC /* DailyDuasModel.swift */,
+				881FC7FD24ACEB2000F4BAC5 /* DuasModel.swift */,
+				88B6CA06251F687400E00335 /* WhiteFastingDaysModel.swift */,
+				88AFC841254EE7B800C3A720 /* IqamahNearByModel.swift */,
+				88407A632577A90800C84569 /* DisplayIqamahModel.swift */,
+				88407A662577AE0C00C84569 /* IqamahJummahDisplayModel.swift */,
+				889E63A7257ACD8A00E15280 /* ConfigureIqamahModel.swift */,
+				884E64332585FDBD00D2004C /* ThreeDotModel.swift */,
+				88AE474D2598D8AC004C2A69 /* SkillsModel.swift */,
+				886A7439259D042500221D15 /* InterestModel.swift */,
+				885FE1F525A33FE800C23231 /* DuaAppealsModel.swift */,
+				88F9AECA25B060170085EE61 /* IslamicCalendarModel.swift */,
+				88BF2A6B25B5A3690039BE1D /* ICPrayerTimes.swift */,
+				88483F8625DD37D600F51B19 /* How2UseCategoriesDataBank.swift */,
+				881C393C25FDEE7900079E9C /* OrganizationsModel.swift */,
+				88BD58B926382FFE005A15C3 /* HTUDataBank.swift */,
+				88B4848428DB7AEB00836FDC /* BenefitsModel.swift */,
+				88B4848628DB818F00836FDC /* HadithModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		529667462A65B419000F8BC2 /* Social Logins */ = {
+			isa = PBXGroup;
+			children = (
+				529667472A65B419000F8BC2 /* Apple Account */,
+				5296674A2A65B419000F8BC2 /* FacebookAccount.swift */,
+				5296674B2A65B419000F8BC2 /* GoogleAccount.swift */,
+			);
+			path = "Social Logins";
+			sourceTree = "<group>";
+		};
+		529667472A65B419000F8BC2 /* Apple Account */ = {
+			isa = PBXGroup;
+			children = (
+				529667482A65B419000F8BC2 /* AppleAccount.swift */,
+				529667492A65B419000F8BC2 /* AppleUserInfo.swift */,
+			);
+			path = "Apple Account";
+			sourceTree = "<group>";
+		};
+		52B5EDF62D6BC3F300511D5A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				52B5EDFD2D6BC40600511D5A /* Adhan */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		52B5EDF92D6BC40600511D5A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				52B5EDF72D6BC40600511D5A /* Adhan.swift */,
+				52B5EDF82D6BC40600511D5A /* AdhanObjc.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		52B5EDFA2D6BC40600511D5A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				52B5EDF92D6BC40600511D5A /* Sources */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		52B5EDFD2D6BC40600511D5A /* Adhan */ = {
+			isa = PBXGroup;
+			children = (
+				52B5EDFA2D6BC40600511D5A /* Swift */,
+				52B5EDFB2D6BC40600511D5A /* LICENSE */,
+				52B5EDFC2D6BC40600511D5A /* README.md */,
+			);
+			path = Adhan;
+			sourceTree = "<group>";
+		};
+		880100B129C79E7D001E4F64 /* AlQuran */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1429C864840082DB47 /* Cells */,
+				880100B729C7A072001E4F64 /* ChaptersListingVC.swift */,
+				880100B929C7A083001E4F64 /* ChapterDetailVC.swift */,
+			);
+			path = AlQuran;
+			sourceTree = "<group>";
+		};
+		880100B229C79E8D001E4F64 /* AlQuran */ = {
+			isa = PBXGroup;
+			children = (
+				880100B329C79EAD001E4F64 /* Verse.swift */,
+				880100B529C79EC4001E4F64 /* ChapterModel.swift */,
+				88464E0F29C8539F0082DB47 /* Juzs.swift */,
+			);
+			path = AlQuran;
+			sourceTree = "<group>";
+		};
+		8802456725FB8EC10051232A /* OrganizationsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8802456225FB8EBA0051232A /* OrganizationsTVC.swift */,
+				8802456325FB8EBA0051232A /* OrganizationsTVC.xib */,
+			);
+			path = OrganizationsTVC;
+			sourceTree = "<group>";
+		};
+		8809E64E24507FDE0021EB67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8809E653245081B20021EB67 /* UI */,
+				480AECEA2151C3D400B22BCB /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8809E64F24507FFD0021EB67 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F647214C5625004880AF /* Assets.xcassets */,
+				48B400DF237E47AC00BC3152 /* loader.gif */,
+				8809E6502450800C0021EB67 /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8809E6502450800C0021EB67 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				48FEA333218140EB00E63D67 /* PT_Sans-Narrow-Web-Bold.ttf */,
+				48FEA334218140EC00E63D67 /* PT_Sans-Narrow-Web-Regular.ttf */,
+				48FEA32F218140D700E63D67 /* PT_Sans-Web-Bold.ttf */,
+				48FEA332218140DC00E63D67 /* PT_Sans-Web-BoldItalic.ttf */,
+				48FEA331218140DB00E63D67 /* PT_Sans-Web-Italic.ttf */,
+				48FEA330218140D900E63D67 /* PT_Sans-Web-Regular.ttf */,
+				8862E3D82581829D00A33F41 /* 1_MUHAMMADI_QURANIC.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8809E6512450801F0021EB67 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F640214C561C004880AF /* AppDelegate.swift */,
+				889E63AD257AD93800E15280 /* GlobalVariables.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8809E652245081870021EB67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8809E66D245091640021EB67 /* StoryBoardExtension.swift */,
+				529667462A65B419000F8BC2 /* Social Logins */,
+				88870796251F8D07000A0844 /* CornerRadius.swift */,
+				480AEC6F2151C3A700B22BCB /* Classes */,
+				88464E0D29C852690082DB47 /* BaseVC.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8809E653245081B20021EB67 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8809E654245081D20021EB67 /* MainScreens */,
+				8809E655245081E60021EB67 /* LaunchScreen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8809E654245081D20021EB67 /* MainScreens */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1129C85E3A0082DB47 /* Quran */,
+				8809E6562450823B0021EB67 /* Authentication */,
+				8809E66224508D1E0021EB67 /* Main */,
+				8809E66724508E690021EB67 /* Options */,
+				8809E65A245083370021EB67 /* Events */,
+				8809E65E24508B630021EB67 /* Announcements */,
+				8809E66324508D890021EB67 /* Settings */,
+				88C02070245B241800A9D893 /* FAQ */,
+				88FC308824ACD68B00018DEC /* Daily Duas */,
+				8894A4E024EA94B800857FE9 /* Contribute */,
+				88303B8B271C0AD80021B950 /* SmartNotifications */,
+				88303B98271C1A680021B950 /* MuslimDirectory */,
+				8899C83B253AD6CE00D17924 /* Iqamah */,
+				889C1E4E25A868A500FE3B5D /* IslamicCalendar */,
+				885269E225D68BB2005B00BB /* Feed A Need */,
+				88592DBA28D8E48A00D55203 /* Occassions */,
+			);
+			path = MainScreens;
+			sourceTree = "<group>";
+		};
+		8809E655245081E60021EB67 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				884121A4267DBF3600606D6E /* SplashScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8809E6562450823B0021EB67 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8809E657245082500021EB67 /* Authentication.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8809E659245082B90021EB67 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				480AEC682151ADBB00B22BCB /* LoginViewController.swift */,
+				480AECF02151DC2600B22BCB /* RegistrationViewController.swift */,
+				88519A892459D1E100235AC9 /* ForgetPasswordVC.swift */,
+				529667442A65B359000F8BC2 /* PreLoginVC.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8809E65A245083370021EB67 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8809E65B2450834C0021EB67 /* Event.storyboard */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8809E65D2450884C0021EB67 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				88FE172E251F2C4100ACEC55 /* EventsNewVC.swift */,
+				127EA2A024385D5B005F311D /* EventsViewController.swift */,
+				127EA2A224388A52005F311D /* AddEventViewController.swift */,
+				88826EB1249FBF0D00D8AC4F /* EventDetailVC.swift */,
+				88DD9E6B25F94E5500F38CC7 /* AddNonMasjidEventVC.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		8809E65E24508B630021EB67 /* Announcements */ = {
+			isa = PBXGroup;
+			children = (
+				8809E65F24508B860021EB67 /* Announcements.storyboard */,
+			);
+			path = Announcements;
+			sourceTree = "<group>";
+		};
+		8809E66124508C460021EB67 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				881087302548D2400050873A /* AnnouncementsNewVC.swift */,
+				88CED54424769729006EE627 /* AnnouncementsVC.swift */,
+				1283ADE82439D84F00EEACC8 /* AddAnnouncementViewController.swift */,
+				88826EB3249FBF1F00D8AC4F /* AnnouncementDetailVC.swift */,
+				88DBB04F25FBF61700B7BC32 /* AddNonMasajidAnnouncementVC.swift */,
+			);
+			path = Announcement;
+			sourceTree = "<group>";
+		};
+		8809E66224508D1E0021EB67 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0A57F644214C561C004880AF /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8809E66324508D890021EB67 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8809E66424508D9C0021EB67 /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8809E66624508DFD0021EB67 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				48FEA32D21812A3800E63D67 /* SettingsViewController.swift */,
+				48F45485227E57B400100F10 /* DegreeAlertViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8809E66724508E690021EB67 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				8809E66824508E7E0021EB67 /* Options.storyboard */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		8809E66A24508EE00021EB67 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				48B34AA2222C9B2300B259F6 /* QiblaViewController.swift */,
+				0A57F642214C561C004880AF /* PrayerTimesViewController.swift */,
+				488B4A6C2169C04500658776 /* NearbyMasajidViewController.swift */,
+				48C45CC221E7D3430013475C /* MyMasajidViewController.swift */,
+				883F588925F9576E0087592C /* OrganizationsVC.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		8809E66C24508F070021EB67 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				480AECF42155AD5700B22BCB /* LandingViewController.swift */,
+				A0641DAF23AF7A8E009120AE /* FeedbackViewController.swift */,
+				A01F368223CC14BA00402C04 /* LoadingViewController.swift */,
+				884E642A2585F7A200D2004C /* ThreeDotVC.swift */,
+				880C01552587FD08001F221F /* NoInternetVC.swift */,
+				88282216258E7F7700404507 /* SideMenuVC.swift */,
+				8881D2B0259F254700FB0005 /* WebViewVC.swift */,
+				88F00D3425B855B100E393AA /* TryAgainVC.swift */,
+				88ECCA4025BA908C00B8B71D /* VerificationSuccessVC.swift */,
+				88DD9E6E25F9506E00F38CC7 /* AddOptionVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8821AA302525163900EEDC21 /* MyEventsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8821AA312525165B00EEDC21 /* MyEventsTVC.swift */,
+				8821AA322525165B00EEDC21 /* MyEventsTVC.xib */,
+			);
+			path = MyEventsTVC;
+			sourceTree = "<group>";
+		};
+		88282219258E812200404507 /* SideMenuTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8828221A258E814600404507 /* SideMenuTVC.swift */,
+				8828221B258E814600404507 /* SideMenuTVC.xib */,
+			);
+			path = SideMenuTVC;
+			sourceTree = "<group>";
+		};
+		88303B8A271C0AB60021B950 /* SmartNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				88303B8E271C0EA30021B950 /* SmartNotificationsVC.swift */,
+				88303B90271C0F940021B950 /* NotificationsListVC.swift */,
+			);
+			path = SmartNotifications;
+			sourceTree = "<group>";
+		};
+		88303B8B271C0AD80021B950 /* SmartNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				88303B8C271C0AF60021B950 /* SmartNotifications.storyboard */,
+			);
+			path = SmartNotifications;
+			sourceTree = "<group>";
+		};
+		88303B92271C0FE60021B950 /* NotificationsListTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88303B93271C100B0021B950 /* NotificationsListTVC.swift */,
+				88303B94271C100B0021B950 /* NotificationsListTVC.xib */,
+			);
+			path = NotificationsListTVC;
+			sourceTree = "<group>";
+		};
+		88303B97271C1A560021B950 /* MuslimDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				88303B9B271C1AE40021B950 /* MuslimDirectoyHomeVC.swift */,
+				88303B9D271C1B430021B950 /* MDBusinessVC.swift */,
+				888490CF271C7B070062F72F /* MDPopSheetVC.swift */,
+			);
+			path = MuslimDirectory;
+			sourceTree = "<group>";
+		};
+		88303B98271C1A680021B950 /* MuslimDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				88303B99271C1A850021B950 /* MuslimDirectory.storyboard */,
+			);
+			path = MuslimDirectory;
+			sourceTree = "<group>";
+		};
+		88329BBC2470364B00D51C0F /* EventTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88329BBD2470367400D51C0F /* EventTVC.swift */,
+				88329BBE2470367400D51C0F /* EventTVC.xib */,
+			);
+			path = EventTVC;
+			sourceTree = "<group>";
+		};
+		88407A6A2577AEAE00C84569 /* Iqamah */ = {
+			isa = PBXGroup;
+			children = (
+				88407A6E2577AEFA00C84569 /* DisplayIqamahBottomTVC */,
+				888DE266257520F200125503 /* DisplayIqamahTVC */,
+				88A800542541FEBB00A2BD8F /* IqamahMaghribTVC */,
+				88CE847C253F5E09001FBC3F /* IqamahConfigureBottomTVC */,
+				88CE8477253F3C72001FBC3F /* IqamahConfigureTVC */,
+				8899C840253AD90400D17924 /* IqamahTVC */,
+			);
+			path = Iqamah;
+			sourceTree = "<group>";
+		};
+		88407A6B2577AEC200C84569 /* Duas */ = {
+			isa = PBXGroup;
+			children = (
+				88EF6C6E25B76EA3002F4342 /* UserRequest4DuasTVC */,
+				88D67E7E255460E200E30519 /* SingleDuaTVC */,
+				88FC309724ACE79500018DEC /* DuasTVC */,
+				88FC308924ACD6EC00018DEC /* DailyDuasTVC */,
+				88ADFEE025A3ACE800D1D5EC /* Request4DuasTVC */,
+			);
+			path = Duas;
+			sourceTree = "<group>";
+		};
+		88407A6D2577AED200C84569 /* EventAnnouncements */ = {
+			isa = PBXGroup;
+			children = (
+				88329BBC2470364B00D51C0F /* EventTVC */,
+				8821AA302525163900EEDC21 /* MyEventsTVC */,
+			);
+			path = EventAnnouncements;
+			sourceTree = "<group>";
+		};
+		88407A6E2577AEFA00C84569 /* DisplayIqamahBottomTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88407A6F2577AF1700C84569 /* DisplayIqamahBottomTVC.swift */,
+				88407A702577AF1700C84569 /* DisplayIqamahBottomTVC.xib */,
+			);
+			path = DisplayIqamahBottomTVC;
+			sourceTree = "<group>";
+		};
+		884121A1267DBEF400606D6E /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				884121A2267DBF1F00606D6E /* SplashScreenVC.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		88464E1129C85E3A0082DB47 /* Quran */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1229C85E4B0082DB47 /* Quran.storyboard */,
+			);
+			path = Quran;
+			sourceTree = "<group>";
+		};
+		88464E1429C864840082DB47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1A29C86CC60082DB47 /* VerseTVC */,
+				88464E1929C86CB10082DB47 /* QuranChaptersList */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		88464E1929C86CB10082DB47 /* QuranChaptersList */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1529C864B30082DB47 /* QuranChaptersListTVC.swift */,
+				88464E1629C864B30082DB47 /* QuranChaptersListTVC.xib */,
+			);
+			path = QuranChaptersList;
+			sourceTree = "<group>";
+		};
+		88464E1A29C86CC60082DB47 /* VerseTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88464E1B29C86CDC0082DB47 /* VerseTVC.swift */,
+				88464E1C29C86CDC0082DB47 /* VerseTVC.xib */,
+			);
+			path = VerseTVC;
+			sourceTree = "<group>";
+		};
+		88483F7E25DD361600F51B19 /* How2UseApp */ = {
+			isa = PBXGroup;
+			children = (
+				88483F7F25DD364D00F51B19 /* How2UseCategoryVC.swift */,
+				88483F8325DD365F00F51B19 /* How2UseDetailVC.swift */,
+			);
+			path = How2UseApp;
+			sourceTree = "<group>";
+		};
+		884E642D2585F84900D2004C /* ThreeDotTVC */ = {
+			isa = PBXGroup;
+			children = (
+				884E642E2585F86700D2004C /* ThreeDotTVC.swift */,
+				884E642F2585F86700D2004C /* ThreeDotTVC.xib */,
+			);
+			path = ThreeDotTVC;
+			sourceTree = "<group>";
+		};
+		885269E125D68B9D005B00BB /* Feed A Need */ = {
+			isa = PBXGroup;
+			children = (
+				885269E625D68C5F005B00BB /* FanSelectionVC.swift */,
+				885269F025D69A5F005B00BB /* FanMasajidVC.swift */,
+				885269F325D6AC07005B00BB /* FanInformationVC.swift */,
+				88D8DDE525DBD4F900A97542 /* FanRegisterMasjidVC.swift */,
+			);
+			path = "Feed A Need";
+			sourceTree = "<group>";
+		};
+		885269E225D68BB2005B00BB /* Feed A Need */ = {
+			isa = PBXGroup;
+			children = (
+				885269E325D68BE6005B00BB /* FeedaNeed.storyboard */,
+			);
+			path = "Feed A Need";
+			sourceTree = "<group>";
+		};
+		885269E925D697A6005B00BB /* MasajidTVC */ = {
+			isa = PBXGroup;
+			children = (
+				885269EA25D697C2005B00BB /* MasajidTVC.swift */,
+				885269EB25D697C2005B00BB /* MasajidTVC.xib */,
+			);
+			path = MasajidTVC;
+			sourceTree = "<group>";
+		};
+		88592DBA28D8E48A00D55203 /* Occassions */ = {
+			isa = PBXGroup;
+			children = (
+				88592DBB28D8E4AA00D55203 /* Occasions.storyboard */,
+			);
+			path = Occassions;
+			sourceTree = "<group>";
+		};
+		88592DBD28D8E9E000D55203 /* Occasions */ = {
+			isa = PBXGroup;
+			children = (
+				88592DBE28D8E9EE00D55203 /* RamadanSpecial */,
+			);
+			path = Occasions;
+			sourceTree = "<group>";
+		};
+		88592DBE28D8E9EE00D55203 /* RamadanSpecial */ = {
+			isa = PBXGroup;
+			children = (
+				88592DBF28D8EA0900D55203 /* RamadanSpecialVC.swift */,
+				88592DC128D8ECDC00D55203 /* SelectableOptionsVC.swift */,
+				88592DC328D8ECFE00D55203 /* OptionDetailVC.swift */,
+			);
+			path = RamadanSpecial;
+			sourceTree = "<group>";
+		};
+		885FE1EE25A33D8600C23231 /* Request4Duas */ = {
+			isa = PBXGroup;
+			children = (
+				885FE1EF25A33DAE00C23231 /* Request4DuasVC.swift */,
+				885FE1F225A33DC700C23231 /* AddDuaRequestVC.swift */,
+				886CE8A025A3B41900DE2B83 /* Request4DuaDetailsVC.swift */,
+			);
+			path = Request4Duas;
+			sourceTree = "<group>";
+		};
+		88756EE4271C3D2900BA3674 /* MuslimDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				88756EEA271C4AAA00BA3674 /* MDItemTVC */,
+				88756EE5271C3D3700BA3674 /* MDCategoriesCVC */,
+			);
+			path = MuslimDirectory;
+			sourceTree = "<group>";
+		};
+		88756EE5271C3D3700BA3674 /* MDCategoriesCVC */ = {
+			isa = PBXGroup;
+			children = (
+				88756EE6271C3D5100BA3674 /* MDCategoriesCVC.swift */,
+				88756EE7271C3D5100BA3674 /* MDCategoriesCVC.xib */,
+			);
+			path = MDCategoriesCVC;
+			sourceTree = "<group>";
+		};
+		88756EEA271C4AAA00BA3674 /* MDItemTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88756EEB271C4ACF00BA3674 /* MDItemTVC.swift */,
+				88756EEC271C4ACF00BA3674 /* MDItemTVC.xib */,
+			);
+			path = MDItemTVC;
+			sourceTree = "<group>";
+		};
+		888DE266257520F200125503 /* DisplayIqamahTVC */ = {
+			isa = PBXGroup;
+			children = (
+				888DE2672575211000125503 /* DisplayIqamahTVC.swift */,
+				888DE2682575211000125503 /* DisplayIqamahTVC.xib */,
+			);
+			path = DisplayIqamahTVC;
+			sourceTree = "<group>";
+		};
+		8894A4E024EA94B800857FE9 /* Contribute */ = {
+			isa = PBXGroup;
+			children = (
+				8894A4E124EA94D300857FE9 /* Contribute.storyboard */,
+			);
+			path = Contribute;
+			sourceTree = "<group>";
+		};
+		8894A4E324EA950000857FE9 /* Contribute */ = {
+			isa = PBXGroup;
+			children = (
+				120FF36E2429C6C200803E8A /* ContributeViewController.swift */,
+				8894A4E424EA952200857FE9 /* ContributeWithSkillsVC.swift */,
+				886A7436259D01DE00221D15 /* ContributeWithTimeVC.swift */,
+				8894A4E624EA959200857FE9 /* ContributeWithMoneyVC.swift */,
+				885D779425E6954100FD919A /* PaymentVC.swift */,
+			);
+			path = Contribute;
+			sourceTree = "<group>";
+		};
+		8895151925DE8DCC0020D506 /* How2UseAppCVC */ = {
+			isa = PBXGroup;
+			children = (
+				8895151A25DE8DEF0020D506 /* How2UseAppCVC.swift */,
+				8895151B25DE8DEF0020D506 /* How2UseAppCVC.xib */,
+			);
+			path = How2UseAppCVC;
+			sourceTree = "<group>";
+		};
+		8899C83A253AD6B900D17924 /* Iqamah */ = {
+			isa = PBXGroup;
+			children = (
+				8899C83E253AD7FC00D17924 /* IqamahVC.swift */,
+				88CE8475253F38E2001FBC3F /* IqamahConfigureVC.swift */,
+				881C93B3256C215300CC9430 /* JummahIqamahVC.swift */,
+				888DE26325751E7800125503 /* DisplayIqamahVC.swift */,
+			);
+			path = Iqamah;
+			sourceTree = "<group>";
+		};
+		8899C83B253AD6CE00D17924 /* Iqamah */ = {
+			isa = PBXGroup;
+			children = (
+				8899C83C253AD6F100D17924 /* Iqamah.storyboard */,
+			);
+			path = Iqamah;
+			sourceTree = "<group>";
+		};
+		8899C840253AD90400D17924 /* IqamahTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8899C841253AD92100D17924 /* IqamahTVC.swift */,
+				8899C842253AD92100D17924 /* IqamahTVC.xib */,
+			);
+			path = IqamahTVC;
+			sourceTree = "<group>";
+		};
+		889C1E4D25A8688600FE3B5D /* IslamicCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				889C1E6F25A8692100FE3B5D /* IslamicCalendarVC.swift */,
+				88DE1D8725B361E70041E86A /* HolidaysVC.swift */,
+				88BF2A6825B5A23F0039BE1D /* ICPrayerTimesVC.swift */,
+			);
+			path = IslamicCalendar;
+			sourceTree = "<group>";
+		};
+		889C1E4E25A868A500FE3B5D /* IslamicCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				889C1E6C25A868C700FE3B5D /* IslamicCalendar.storyboard */,
+			);
+			path = IslamicCalendar;
+			sourceTree = "<group>";
+		};
+		889E6396257AC54A00E15280 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				889E639E257AC74900E15280 /* SettingsCellTVC */,
+				889E6398257AC56500E15280 /* SettingsSectionTVC */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		889E6398257AC56500E15280 /* SettingsSectionTVC */ = {
+			isa = PBXGroup;
+			children = (
+				889E6399257AC59F00E15280 /* SettingsSectionTVC.swift */,
+				889E639A257AC59F00E15280 /* SettingsSectionTVC.xib */,
+			);
+			path = SettingsSectionTVC;
+			sourceTree = "<group>";
+		};
+		889E639E257AC74900E15280 /* SettingsCellTVC */ = {
+			isa = PBXGroup;
+			children = (
+				889E639F257AC75E00E15280 /* SettingsCellTVC.swift */,
+				889E63A0257AC75E00E15280 /* SettingsCellTVC.xib */,
+			);
+			path = SettingsCellTVC;
+			sourceTree = "<group>";
+		};
+		88A800542541FEBB00A2BD8F /* IqamahMaghribTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88A800552541FED500A2BD8F /* IqamahMaghribTVC.swift */,
+				88A800562541FED500A2BD8F /* IqamahMaghribTVC.xib */,
+			);
+			path = IqamahMaghribTVC;
+			sourceTree = "<group>";
+		};
+		88AAA89224CCACFF00B0E7C0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				88AAA89324CCAD1500B0E7C0 /* ProfileVC.swift */,
+				88A721CC24CF4358008E28F2 /* ChangePasswordVC.swift */,
+				88C2B08C24CF53B40008C96E /* VeriftyOtpVC.swift */,
+				88E577BA24DD902A00C94BFF /* EditProfileVC.swift */,
+				887F95172638014500775A02 /* PhoneVerificationVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		88ADFEE025A3ACE800D1D5EC /* Request4DuasTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88ADFEDA25A3AC8700D1D5EC /* Request4DuasTVC.swift */,
+				88ADFEDB25A3AC8700D1D5EC /* Request4DuasTVC.xib */,
+			);
+			path = Request4DuasTVC;
+			sourceTree = "<group>";
+		};
+		88B4848828DB83FC00836FDC /* SimpleTextTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88B4848928DB843E00836FDC /* SimpleTextTVC.swift */,
+				88B4848A28DB843E00836FDC /* SimpleTextTVC.xib */,
+			);
+			path = SimpleTextTVC;
+			sourceTree = "<group>";
+		};
+		88BF2A6E25B5ACDD0039BE1D /* ICPrayerTimesTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88BF2A6F25B5ACF40039BE1D /* ICPrayerTimesTVC.swift */,
+				88BF2A7025B5ACF40039BE1D /* ICPrayerTimesTVC.xib */,
+			);
+			path = ICPrayerTimesTVC;
+			sourceTree = "<group>";
+		};
+		88C02070245B241800A9D893 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				88C02071245B242E00A9D893 /* Faq.storyboard */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		88C02073245B246D00A9D893 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				88C02074245B248F00A9D893 /* faqVC.swift */,
+				88C02076245B24A300A9D893 /* faqDetailVC.swift */,
+				88483F7E25DD361600F51B19 /* How2UseApp */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		88C02078245B27A600A9D893 /* FAQ Primary */ = {
+			isa = PBXGroup;
+			children = (
+				88C02079245B27C400A9D893 /* FaqTVC.swift */,
+				88C0207A245B27C400A9D893 /* FaqTVC.xib */,
+			);
+			path = "FAQ Primary";
+			sourceTree = "<group>";
+		};
+		88CE8477253F3C72001FBC3F /* IqamahConfigureTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88CE8478253F3C98001FBC3F /* IqamahConfigureTVC.swift */,
+				88CE8479253F3C98001FBC3F /* IqamahConfigureTVC.xib */,
+			);
+			path = IqamahConfigureTVC;
+			sourceTree = "<group>";
+		};
+		88CE847C253F5E09001FBC3F /* IqamahConfigureBottomTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88CE847D253F5E2F001FBC3F /* IqamahConfigureBottomTVC.swift */,
+				88CE847E253F5E2F001FBC3F /* IqamahConfigureBottomTVC.xib */,
+			);
+			path = IqamahConfigureBottomTVC;
+			sourceTree = "<group>";
+		};
+		88D67E7E255460E200E30519 /* SingleDuaTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88D67E7F255460FF00E30519 /* SingleDuaTVC.swift */,
+				88D67E80255460FF00E30519 /* SingleDuaTVC.xib */,
+			);
+			path = SingleDuaTVC;
+			sourceTree = "<group>";
+		};
+		88DE1D8A25B3636A0041E86A /* ICHolidaysTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88DE1D8B25B363950041E86A /* ICHolidaysTVC.swift */,
+				88DE1D8C25B363950041E86A /* ICHolidaysTVC.xib */,
+			);
+			path = ICHolidaysTVC;
+			sourceTree = "<group>";
+		};
+		88EF6C6E25B76EA3002F4342 /* UserRequest4DuasTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88EF6C6F25B76EBC002F4342 /* UserRequest4DuasTVC.swift */,
+				88EF6C7025B76EBC002F4342 /* UserRequest4DuasTVC.xib */,
+			);
+			path = UserRequest4DuasTVC;
+			sourceTree = "<group>";
+		};
+		88FC308824ACD68B00018DEC /* Daily Duas */ = {
+			isa = PBXGroup;
+			children = (
+				88FC309124ACD9C000018DEC /* Duas.storyboard */,
+			);
+			path = "Daily Duas";
+			sourceTree = "<group>";
+		};
+		88FC308924ACD6EC00018DEC /* DailyDuasTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88FC308A24ACD71500018DEC /* DailyDuasTVC.swift */,
+				88FC308B24ACD71500018DEC /* DailyDuasTVC.xib */,
+			);
+			path = DailyDuasTVC;
+			sourceTree = "<group>";
+		};
+		88FC308E24ACD92E00018DEC /* Duas */ = {
+			isa = PBXGroup;
+			children = (
+				88FC308F24ACD95B00018DEC /* DailyDuasVC.swift */,
+				88FC309524ACE63C00018DEC /* DuasVC.swift */,
+				88B121C424CC9C640043DAC5 /* FavouriteDuasVC.swift */,
+				88D67E7C25545FE800E30519 /* SingleDuaVC.swift */,
+				885FE1EE25A33D8600C23231 /* Request4Duas */,
+			);
+			path = Duas;
+			sourceTree = "<group>";
+		};
+		88FC309724ACE79500018DEC /* DuasTVC */ = {
+			isa = PBXGroup;
+			children = (
+				88FC309824ACE7AC00018DEC /* DuasTVC.swift */,
+				88FC309924ACE7AC00018DEC /* DuasTVC.xib */,
+			);
+			path = DuasTVC;
+			sourceTree = "<group>";
+		};
+		C394B1651A3E2F938D17DAA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1091BDA3FF13F542223A462 /* Pods_AllMasajid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A57F63C214C561C004880AF /* AllMasajid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A57F665214C5626004880AF /* Build configuration list for PBXNativeTarget "AllMasajid" */;
+			buildPhases = (
+				70583BCF72167189B73CD915 /* [CP] Check Pods Manifest.lock */,
+				0A57F639214C561C004880AF /* Sources */,
+				0A57F63A214C561C004880AF /* Frameworks */,
+				0A57F63B214C561C004880AF /* Resources */,
+				F36899828B4F65D30D20517A /* [CP] Embed Pods Frameworks */,
+				943B9BACA81B5E365B6E4E90 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AllMasajid;
+			productName = AllMasajid;
+			productReference = 0A57F63D214C561C004880AF /* AllMasajid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A57F635214C561C004880AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = allMasajid;
+				TargetAttributes = {
+					0A57F63C214C561C004880AF = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1130;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 0A57F638214C561C004880AF /* Build configuration list for PBXProject "AllMasajid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A57F634214C561C004880AF;
+			productRefGroup = 0A57F63E214C561C004880AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A57F63C214C561C004880AF /* AllMasajid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A57F63B214C561C004880AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B4848C28DB843E00836FDC /* SimpleTextTVC.xib in Resources */,
+				8809E66024508B860021EB67 /* Announcements.storyboard in Resources */,
+				8809E66924508E7E0021EB67 /* Options.storyboard in Resources */,
+				8809E65C2450834C0021EB67 /* Event.storyboard in Resources */,
+				88303B96271C100B0021B950 /* NotificationsListTVC.xib in Resources */,
+				88464E1E29C86CDC0082DB47 /* VerseTVC.xib in Resources */,
+				48FEA3392181489800E63D67 /* PT_Sans-Web-Italic.ttf in Resources */,
+				88C02072245B242E00A9D893 /* Faq.storyboard in Resources */,
+				88FC309B24ACE7AC00018DEC /* DuasTVC.xib in Resources */,
+				88756EE9271C3D5100BA3674 /* MDCategoriesCVC.xib in Resources */,
+				88329BC02470367400D51C0F /* EventTVC.xib in Resources */,
+				8802456525FB8EBA0051232A /* OrganizationsTVC.xib in Resources */,
+				88CE847B253F3C98001FBC3F /* IqamahConfigureTVC.xib in Resources */,
+				8899C83D253AD6F100D17924 /* Iqamah.storyboard in Resources */,
+				88A800582541FED500A2BD8F /* IqamahMaghribTVC.xib in Resources */,
+				48FEA33A2181489800E63D67 /* PT_Sans-Web-Regular.ttf in Resources */,
+				88303B9A271C1A850021B950 /* MuslimDirectory.storyboard in Resources */,
+				480AECB52151C3A700B22BCB /* FontManager_ar.plist in Resources */,
+				889C1E6D25A868C700FE3B5D /* IslamicCalendar.storyboard in Resources */,
+				88FC308D24ACD71500018DEC /* DailyDuasTVC.xib in Resources */,
+				889E63A2257AC75E00E15280 /* SettingsCellTVC.xib in Resources */,
+				889E639C257AC59F00E15280 /* SettingsSectionTVC.xib in Resources */,
+				48FEA3362181489200E63D67 /* PT_Sans-Narrow-Web-Regular.ttf in Resources */,
+				480AECB32151C3A700B22BCB /* ColorManager.plist in Resources */,
+				88464E1829C864B30082DB47 /* QuranChaptersListTVC.xib in Resources */,
+				480AECB42151C3A700B22BCB /* FontManager_iPad_ar.plist in Resources */,
+				884121A5267DBF3600606D6E /* SplashScreen.storyboard in Resources */,
+				8899C844253AD92100D17924 /* IqamahTVC.xib in Resources */,
+				88BF2A7225B5ACF40039BE1D /* ICPrayerTimesTVC.xib in Resources */,
+				88FC309224ACD9C000018DEC /* Duas.storyboard in Resources */,
+				88CE8480253F5E2F001FBC3F /* IqamahConfigureBottomTVC.xib in Resources */,
+				88951F552518F55C005F5F92 /* GoogleService-Info.plist in Resources */,
+				48FEA3382181489800E63D67 /* PT_Sans-Web-BoldItalic.ttf in Resources */,
+				8809E658245082500021EB67 /* Authentication.storyboard in Resources */,
+				52B5EDFE2D6BC40600511D5A /* README.md in Resources */,
+				52B5EDFF2D6BC40600511D5A /* LICENSE in Resources */,
+				8809E66524508D9C0021EB67 /* Settings.storyboard in Resources */,
+				885269ED25D697C2005B00BB /* MasajidTVC.xib in Resources */,
+				885269E425D68BE6005B00BB /* FeedaNeed.storyboard in Resources */,
+				0A57F648214C5625004880AF /* Assets.xcassets in Resources */,
+				88756EEE271C4ACF00BA3674 /* MDItemTVC.xib in Resources */,
+				480AECB62151C3A700B22BCB /* FontManager.plist in Resources */,
+				88303B8D271C0AF60021B950 /* SmartNotifications.storyboard in Resources */,
+				88ADFEDD25A3AC8700D1D5EC /* Request4DuasTVC.xib in Resources */,
+				8821AA342525165B00EEDC21 /* MyEventsTVC.xib in Resources */,
+				88464E1329C85E4B0082DB47 /* Quran.storyboard in Resources */,
+				48FEA3352181489000E63D67 /* PT_Sans-Narrow-Web-Bold.ttf in Resources */,
+				48B400E0237E47AC00BC3152 /* loader.gif in Resources */,
+				888DE26A2575211000125503 /* DisplayIqamahTVC.xib in Resources */,
+				88DE1D8E25B363950041E86A /* ICHolidaysTVC.xib in Resources */,
+				8895151D25DE8DEF0020D506 /* How2UseAppCVC.xib in Resources */,
+				88EF6C7225B76EBC002F4342 /* UserRequest4DuasTVC.xib in Resources */,
+				8862E3D92581829D00A33F41 /* 1_MUHAMMADI_QURANIC.ttf in Resources */,
+				8828221D258E814600404507 /* SideMenuTVC.xib in Resources */,
+				88C0207C245B27C400A9D893 /* FaqTVC.xib in Resources */,
+				88407A722577AF1700C84569 /* DisplayIqamahBottomTVC.xib in Resources */,
+				88D67E82255460FF00E30519 /* SingleDuaTVC.xib in Resources */,
+				8894A4E224EA94D300857FE9 /* Contribute.storyboard in Resources */,
+				0A57F646214C561C004880AF /* Main.storyboard in Resources */,
+				88592DBC28D8E4AA00D55203 /* Occasions.storyboard in Resources */,
+				884E64312585F86700D2004C /* ThreeDotTVC.xib in Resources */,
+				48FEA3372181489800E63D67 /* PT_Sans-Web-Bold.ttf in Resources */,
+				480AECB22151C3A700B22BCB /* FontManager_iPad.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70583BCF72167189B73CD915 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllMasajid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		943B9BACA81B5E365B6E4E90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36899828B4F65D30D20517A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllMasajid/Pods-AllMasajid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A57F639214C561C004880AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482566C5226D2BA400FBC9D3 /* SavedLocation.swift in Sources */,
+				88303B91271C0F940021B950 /* NotificationsListVC.swift in Sources */,
+				88407A642577A90800C84569 /* DisplayIqamahModel.swift in Sources */,
+				480AECC22151C3A700B22BCB /* String+Extensions.swift in Sources */,
+				88464E0E29C852690082DB47 /* BaseVC.swift in Sources */,
+				88CE8476253F38E2001FBC3F /* IqamahConfigureVC.swift in Sources */,
+				1283ADE92439D84F00EEACC8 /* AddAnnouncementViewController.swift in Sources */,
+				8833ECC12487EE2E0062F31C /* AnnounementsModel.swift in Sources */,
+				48B34AA5222C9C1600B259F6 /* CLLocation+Extension.swift in Sources */,
+				88BF2A6925B5A23F0039BE1D /* ICPrayerTimesVC.swift in Sources */,
+				88ECCA4125BA908C00B8B71D /* VerificationSuccessVC.swift in Sources */,
+				480AECB82151C3A700B22BCB /* BaseManager.swift in Sources */,
+				885269F125D69A5F005B00BB /* FanMasajidVC.swift in Sources */,
+				8828221C258E814600404507 /* SideMenuTVC.swift in Sources */,
+				880C01562587FD08001F221F /* NoInternetVC.swift in Sources */,
+				5296674D2A65B419000F8BC2 /* AppleUserInfo.swift in Sources */,
+				127EA2A324388A52005F311D /* AddEventViewController.swift in Sources */,
+				884B19252496846600679773 /* ThreeDotProtocol.swift in Sources */,
+				88A800572541FED500A2BD8F /* IqamahMaghribTVC.swift in Sources */,
+				48C45CC521E7D41B0013475C /* MyMasajidTableViewCell.swift in Sources */,
+				120FF36F2429C6C200803E8A /* ContributeViewController.swift in Sources */,
+				0A57F643214C561C004880AF /* PrayerTimesViewController.swift in Sources */,
+				8864CBA12459F59E003D069D /* APIResponseUtil.swift in Sources */,
+				885269EC25D697C2005B00BB /* MasajidTVC.swift in Sources */,
+				883F588A25F9576E0087592C /* OrganizationsVC.swift in Sources */,
+				887F95182638014500775A02 /* PhoneVerificationVC.swift in Sources */,
+				88CED54524769729006EE627 /* AnnouncementsVC.swift in Sources */,
+				88ECCA4425BA915E00B8B71D /* GoBackProtocol.swift in Sources */,
+				881C393D25FDEE7900079E9C /* OrganizationsModel.swift in Sources */,
+				88483F8725DD37D600F51B19 /* How2UseCategoriesDataBank.swift in Sources */,
+				480AECE82151C3A700B22BCB /* Utility.swift in Sources */,
+				88483F8025DD364D00F51B19 /* How2UseCategoryVC.swift in Sources */,
+				88AAA89424CCAD1500B0E7C0 /* ProfileVC.swift in Sources */,
+				8887079B251F9863000A0844 /* DynamicGridProtocol.swift in Sources */,
+				480AECBB2151C3A700B22BCB /* DesignUtility.swift in Sources */,
+				88C8A6BA246AB6CD008F2F1E /* FaqsModel.swift in Sources */,
+				529667452A65B359000F8BC2 /* PreLoginVC.swift in Sources */,
+				88483F8425DD365F00F51B19 /* How2UseDetailVC.swift in Sources */,
+				48F45486227E57B400100F10 /* DegreeAlertViewController.swift in Sources */,
+				88826EB4249FBF1F00D8AC4F /* AnnouncementDetailVC.swift in Sources */,
+				48F323A6214E2072002703B0 /* PrayerTimesTableViewCell.swift in Sources */,
+				88592DC428D8ECFE00D55203 /* OptionDetailVC.swift in Sources */,
+				88303B9C271C1AE40021B950 /* MuslimDirectoyHomeVC.swift in Sources */,
+				88F00D3525B855B100E393AA /* TryAgainVC.swift in Sources */,
+				88C02075245B248F00A9D893 /* faqVC.swift in Sources */,
+				889E63A1257AC75E00E15280 /* SettingsCellTVC.swift in Sources */,
+				48FEA32E21812A3800E63D67 /* SettingsViewController.swift in Sources */,
+				480AECB02151C3A700B22BCB /* AFManagerProtocol.swift in Sources */,
+				88DD9E6F25F9506E00F38CC7 /* AddOptionVC.swift in Sources */,
+				88F9AECB25B060170085EE61 /* IslamicCalendarModel.swift in Sources */,
+				88AE474E2598D8AC004C2A69 /* SkillsModel.swift in Sources */,
+				88BF2A6C25B5A3690039BE1D /* ICPrayerTimes.swift in Sources */,
+				8809E66E245091640021EB67 /* StoryBoardExtension.swift in Sources */,
+				480AECBC2151C3A700B22BCB /* DefaultConfig.swift in Sources */,
+				88D8DDE625DBD4F900A97542 /* FanRegisterMasjidVC.swift in Sources */,
+				88407A712577AF1700C84569 /* DisplayIqamahBottomTVC.swift in Sources */,
+				5296674C2A65B419000F8BC2 /* AppleAccount.swift in Sources */,
+				884860EB24AB8F3A00C7EFB9 /* GetImage.swift in Sources */,
+				885269E725D68C5F005B00BB /* FanSelectionVC.swift in Sources */,
+				88CE847A253F3C98001FBC3F /* IqamahConfigureTVC.swift in Sources */,
+				88CE847F253F5E2F001FBC3F /* IqamahConfigureBottomTVC.swift in Sources */,
+				88FC309424ACDF2700018DEC /* DailyDuasModel.swift in Sources */,
+				88303B8F271C0EA30021B950 /* SmartNotificationsVC.swift in Sources */,
+				880100BA29C7A083001E4F64 /* ChapterDetailVC.swift in Sources */,
+				889E639B257AC59F00E15280 /* SettingsSectionTVC.swift in Sources */,
+				88EF6C7125B76EBC002F4342 /* UserRequest4DuasTVC.swift in Sources */,
+				88BD58BA26382FFE005A15C3 /* HTUDataBank.swift in Sources */,
+				889C1E7025A8692100FE3B5D /* IslamicCalendarVC.swift in Sources */,
+				48B34AA3222C9B2300B259F6 /* QiblaViewController.swift in Sources */,
+				888DE26425751E7800125503 /* DisplayIqamahVC.swift in Sources */,
+				884E64302585F86700D2004C /* ThreeDotTVC.swift in Sources */,
+				880100B429C79EAD001E4F64 /* Verse.swift in Sources */,
+				88B121C524CC9C640043DAC5 /* FavouriteDuasVC.swift in Sources */,
+				88DD9E6C25F94E5500F38CC7 /* AddNonMasjidEventVC.swift in Sources */,
+				48FEA33E21814FBA00E63D67 /* MenuTableViewCell.swift in Sources */,
+				8895151C25DE8DEF0020D506 /* How2UseAppCVC.swift in Sources */,
+				481C85882210AB2C0042A871 /* LocationManager.swift in Sources */,
+				88C02077245B24A300A9D893 /* faqDetailVC.swift in Sources */,
+				8894A4E524EA952300857FE9 /* ContributeWithSkillsVC.swift in Sources */,
+				8894A4E724EA959200857FE9 /* ContributeWithMoneyVC.swift in Sources */,
+				482566C1225958B500FBC9D3 /* SettingsChildTableViewCell.swift in Sources */,
+				888DE2692575211000125503 /* DisplayIqamahTVC.swift in Sources */,
+				488B4A712169C1A200658776 /* MasjidItem.swift in Sources */,
+				88D67E81255460FF00E30519 /* SingleDuaTVC.swift in Sources */,
+				88FE172F251F2C4100ACEC55 /* EventsNewVC.swift in Sources */,
+				480AECB12151C3A700B22BCB /* AFNetwork.swift in Sources */,
+				887B934729C4BB6C00B668C3 /* CommonApiResponse.swift in Sources */,
+				88C931A7248D3B41007CC2A4 /* EventsModel.swift in Sources */,
+				88282217258E7F7700404507 /* SideMenuVC.swift in Sources */,
+				881C93B4256C215300CC9430 /* JummahIqamahVC.swift in Sources */,
+				88B4848728DB818F00836FDC /* HadithModel.swift in Sources */,
+				5296674F2A65B419000F8BC2 /* GoogleAccount.swift in Sources */,
+				885FE1F625A33FE800C23231 /* DuaAppealsModel.swift in Sources */,
+				48B34AA1222C58CD00B259F6 /* EventCollectionViewCell.swift in Sources */,
+				884E64342585FDBD00D2004C /* ThreeDotModel.swift in Sources */,
+				480AECBA2151C3A700B22BCB /* Alert.swift in Sources */,
+				A0641DB023AF7A8E009120AE /* FeedbackViewController.swift in Sources */,
+				88329BBF2470367400D51C0F /* EventTVC.swift in Sources */,
+				488B4A6D2169C04500658776 /* NearbyMasajidViewController.swift in Sources */,
+				88303B95271C100B0021B950 /* NotificationsListTVC.swift in Sources */,
+				889E63A8257ACD8A00E15280 /* ConfigureIqamahModel.swift in Sources */,
+				A0497EAA23B3B22D0059BA3B /* MainCell.swift in Sources */,
+				480AECB72151C3A700B22BCB /* FontManager.swift in Sources */,
+				8881D2B1259F254700FB0005 /* WebViewVC.swift in Sources */,
+				88756EE8271C3D5100BA3674 /* MDCategoriesCVC.swift in Sources */,
+				88FC309A24ACE7AC00018DEC /* DuasTVC.swift in Sources */,
+				52B5EE002D6BC40600511D5A /* Adhan.swift in Sources */,
+				52B5EE012D6BC40600511D5A /* AdhanObjc.swift in Sources */,
+				88303B9E271C1B430021B950 /* MDBusinessVC.swift in Sources */,
+				888490D0271C7B070062F72F /* MDPopSheetVC.swift in Sources */,
+				88FC309024ACD95B00018DEC /* DailyDuasVC.swift in Sources */,
+				88870799251F9812000A0844 /* LocationDelegate.swift in Sources */,
+				885D779525E6954100FD919A /* PaymentVC.swift in Sources */,
+				8864CBA02459F59E003D069D /* APIRequestUtil .swift in Sources */,
+				480AECAF2151C3A700B22BCB /* AFParam.swift in Sources */,
+				881087312548D2400050873A /* AnnouncementsNewVC.swift in Sources */,
+				127EA2A124385D5B005F311D /* EventsViewController.swift in Sources */,
+				88A721CD24CF4358008E28F2 /* ChangePasswordVC.swift in Sources */,
+				480AECC12151C3A700B22BCB /* ViewControllerExtension.swift in Sources */,
+				88B6CA07251F687400E00335 /* WhiteFastingDaysModel.swift in Sources */,
+				88D67E7D25545FE800E30519 /* SingleDuaVC.swift in Sources */,
+				881FC7FE24ACEB2000F4BAC5 /* DuasModel.swift in Sources */,
+				884E642B2585F7A200D2004C /* ThreeDotVC.swift in Sources */,
+				488B4A6F2169C0E400658776 /* NearbyMasajidTableViewCell.swift in Sources */,
+				48FEA32C218129B400E63D67 /* SettingsTableViewCell.swift in Sources */,
+				88826EB2249FBF0D00D8AC4F /* EventDetailVC.swift in Sources */,
+				88592DC228D8ECDC00D55203 /* SelectableOptionsVC.swift in Sources */,
+				88C0207B245B27C400A9D893 /* FaqTVC.swift in Sources */,
+				A0497EA823B37CC80059BA3B /* DynamicGridLayout.swift in Sources */,
+				88519A8A2459D1E100235AC9 /* ForgetPasswordVC.swift in Sources */,
+				8887079D251F98AD000A0844 /* ReloadProtocol.swift in Sources */,
+				88464E1D29C86CDC0082DB47 /* VerseTVC.swift in Sources */,
+				88407A672577AE0C00C84569 /* IqamahJummahDisplayModel.swift in Sources */,
+				480AECBD2151C3A700B22BCB /* DeviceUtility.swift in Sources */,
+				88464E1729C864B30082DB47 /* QuranChaptersListTVC.swift in Sources */,
+				886A743A259D042500221D15 /* InterestModel.swift in Sources */,
+				880C01592587FFFF001F221F /* Reachability.swift in Sources */,
+				480AECF52155AD5700B22BCB /* LandingViewController.swift in Sources */,
+				889E63AB257AD58900E15280 /* GlobalFunctions.swift in Sources */,
+				88B4848B28DB843E00836FDC /* SimpleTextTVC.swift in Sources */,
+				88DE1D8D25B363950041E86A /* ICHolidaysTVC.swift in Sources */,
+				5296674E2A65B419000F8BC2 /* FacebookAccount.swift in Sources */,
+				88FC309624ACE63C00018DEC /* DuasVC.swift in Sources */,
+				A01F368323CC14BA00402C04 /* LoadingViewController.swift in Sources */,
+				880100B829C7A072001E4F64 /* ChaptersListingVC.swift in Sources */,
+				880100B629C79EC4001E4F64 /* ChapterModel.swift in Sources */,
+				480AECC32151C3A700B22BCB /* UtilityExtensions.swift in Sources */,
+				88B4848528DB7AEB00836FDC /* BenefitsModel.swift in Sources */,
+				885269F425D6AC07005B00BB /* FanInformationVC.swift in Sources */,
+				8821AA332525165B00EEDC21 /* MyEventsTVC.swift in Sources */,
+				8899C843253AD92100D17924 /* IqamahTVC.swift in Sources */,
+				889E63AE257AD93800E15280 /* GlobalVariables.swift in Sources */,
+				88AFC842254EE7B800C3A720 /* IqamahNearByModel.swift in Sources */,
+				886CE8A125A3B41900DE2B83 /* Request4DuaDetailsVC.swift in Sources */,
+				88ADFEDC25A3AC8700D1D5EC /* Request4DuasTVC.swift in Sources */,
+				8887079F251F98ED000A0844 /* SettingsProtocol.swift in Sources */,
+				480AECE72151C3A700B22BCB /* BaseLayoutConstraint.swift in Sources */,
+				88F00D3825B8564F00E393AA /* TryAgainProtocol.swift in Sources */,
+				88E577BB24DD902A00C94BFF /* EditProfileVC.swift in Sources */,
+				8846181D246854EA0050CB96 /* MyMasajidModel.swift in Sources */,
+				88C2B08D24CF53B40008C96E /* VeriftyOtpVC.swift in Sources */,
+				88870797251F8D07000A0844 /* CornerRadius.swift in Sources */,
+				88756EED271C4ACF00BA3674 /* MDItemTVC.swift in Sources */,
+				88DE1D8825B361E70041E86A /* HolidaysVC.swift in Sources */,
+				88FC308C24ACD71500018DEC /* DailyDuasTVC.swift in Sources */,
+				88282214258E7F4A00404507 /* SideMenuProtocol.swift in Sources */,
+				88125EDE25AC656400693FFC /* RefreshProtocol.swift in Sources */,
+				480AECF12151DC2600B22BCB /* RegistrationViewController.swift in Sources */,
+				885FE1F325A33DC700C23231 /* AddDuaRequestVC.swift in Sources */,
+				88DBB05025FBF61700B7BC32 /* AddNonMasajidAnnouncementVC.swift in Sources */,
+				88BF2A7125B5ACF40039BE1D /* ICPrayerTimesTVC.swift in Sources */,
+				480AEC692151ADBC00B22BCB /* LoginViewController.swift in Sources */,
+				8899C83F253AD7FC00D17924 /* IqamahVC.swift in Sources */,
+				0A57F641214C561C004880AF /* AppDelegate.swift in Sources */,
+				48C45CC321E7D3430013475C /* MyMasajidViewController.swift in Sources */,
+				884121A3267DBF1F00606D6E /* SplashScreenVC.swift in Sources */,
+				885FE1F025A33DAE00C23231 /* Request4DuasVC.swift in Sources */,
+				8802456425FB8EBA0051232A /* OrganizationsTVC.swift in Sources */,
+				88464E1029C8539F0082DB47 /* Juzs.swift in Sources */,
+				886A7437259D01DE00221D15 /* ContributeWithTimeVC.swift in Sources */,
+				88592DC028D8EA0900D55203 /* RamadanSpecialVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A57F644214C561C004880AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A57F645214C561C004880AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A57F663214C5626004880AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0A57F664214C5626004880AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A57F666214C5626004880AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1350931D27633BF3431D69B /* Pods-AllMasajid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AllMasajid/AllMasajid.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = 9MX5XKR2JZ;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = AllMasajid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.30;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muslim.AllMasajid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A57F667214C5626004880AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5759B9E094B05AEE8BA0F3A5 /* Pods-AllMasajid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AllMasajid/AllMasajid.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = 9MX5XKR2JZ;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = AllMasajid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.30;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muslim.AllMasajid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A57F638214C561C004880AF /* Build configuration list for PBXProject "AllMasajid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A57F663214C5626004880AF /* Debug */,
+				0A57F664214C5626004880AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A57F665214C5626004880AF /* Build configuration list for PBXNativeTarget "AllMasajid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A57F666214C5626004880AF /* Debug */,
+				0A57F667214C5626004880AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A57F635214C561C004880AF /* Project object */;
+}

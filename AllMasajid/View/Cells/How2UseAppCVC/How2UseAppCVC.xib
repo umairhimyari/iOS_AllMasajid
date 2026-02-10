@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PT_Sans-Web-Regular.ttf">
+            <string>PTSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="How2UseAppCVC" customModule="AllMasajid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="333"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="333"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c81-Bh-EVN">
+                        <rect key="frame" x="5" y="304.5" width="333" height="18.5"/>
+                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="allMlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-oN-V1N">
+                        <rect key="frame" x="5" y="10" width="333" height="289.5"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="c81-Bh-EVN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="B1P-Ba-4Y9"/>
+                <constraint firstAttribute="trailing" secondItem="c81-Bh-EVN" secondAttribute="trailing" constant="5" id="UO2-sl-wH6"/>
+                <constraint firstAttribute="trailing" secondItem="Pgf-oN-V1N" secondAttribute="trailing" constant="5" id="WDp-6a-WGs"/>
+                <constraint firstItem="c81-Bh-EVN" firstAttribute="top" secondItem="Pgf-oN-V1N" secondAttribute="bottom" constant="5" id="m13-yh-Jzp"/>
+                <constraint firstItem="Pgf-oN-V1N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="mts-JK-k7r"/>
+                <constraint firstAttribute="bottom" secondItem="c81-Bh-EVN" secondAttribute="bottom" constant="10" id="pPE-ub-doS"/>
+                <constraint firstItem="Pgf-oN-V1N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="sTJ-tJ-qXI"/>
+            </constraints>
+            <size key="customSize" width="343" height="333"/>
+            <connections>
+                <outlet property="detailLBL" destination="c81-Bh-EVN" id="ZbD-Ii-Pq1"/>
+                <outlet property="myImageView" destination="Pgf-oN-V1N" id="mFh-Aa-jOP"/>
+            </connections>
+            <point key="canvasLocation" x="350" y="189.17410714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="allMlogo" width="341" height="341"/>
+    </resources>
+</document>

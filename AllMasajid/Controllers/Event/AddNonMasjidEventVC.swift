@@ -1,0 +1,622 @@
+//
+//  AddNonMasjidEventVC.swift
+//  AllMasajid
+//
+//  Created by Fahad Shafiq on 10/03/2021.
+//  Copyright © 2021 allMasajid. All rights reserved.
+//
+
+import UIKit
+import SwiftValidator
+import SafariServices
+import PKHUD
+import CoreLocation
+import SwiftyJSON
+import GooglePlaces
+
+class AddNonMasjidEventVC: UIViewController,ValidationDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, GoBackProtocol {
+        
+    @IBOutlet weak var txtCityName: UITextField!
+    @IBOutlet weak var btnUpload: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var tvMessageFromHost: UITextView!
+    @IBOutlet weak var tvDescription: UITextView!
+    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtTime: UITextField!
+    @IBOutlet weak var txtDate: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPhoneNumber: UITextField!
+    @IBOutlet weak var txtWebsite: UITextField!
+    @IBOutlet weak var txtOrganizationName: UITextField!
+    @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet var footerView: UIView!
+    @IBOutlet weak var imageStatusLabel: UILabel!
+    @IBOutlet weak var flyerUploadLBL: UILabel!
+    
+    let pickerController = UIImagePickerController()
+    var eventDate = Date()
+    var eventTime = Date()
+    let datePicker = UIDatePicker()
+    let timePicker = UIDatePicker()
+    let validator = Validator()
+    var imageAttachment : UIImage?
+    
+    var imageData: Data?
+    
+    var selectedPlace: MasjidItem?
+    var selectedCity = MasjidItem()
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        showDatePicker()
+        setupValidator()
+        setupInitials()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        let contentRect: CGRect = self.scrollView.subviews.reduce(into: .zero) { rect, view in
+            rect = rect.union(view.frame)
+        }
+        self.scrollView.contentSize = contentRect.size
+    }
+    
+    @IBAction func uploadPicture(_ sender: UIButton) {
+        imageBtn()
+    }
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func submitEvent(_ sender: UIButton) {
+        if txtWebsite.text!.isValidUrl(){
+            if txtEmail.text!.isValidEmail(){
+                validator.validate(self)
+            }else{
+                HUD.flash(.label("Please Enter Valid Email"), delay: 0.8)
+            }
+        }else{
+            HUD.flash(.label("Please Enter Valid Website Link"), delay: 0.8)
+        }
+    }
+    
+    @IBAction func threeDotPressed(_ sender: UIButton) {
+        let vc = UIStoryboard().LoadThreeDotScreen()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.delegate = self
+        vc.screen = "item3"
+        self.parent?.present(vc, animated: false, completion: nil)
+    }
+    
+    @IBAction func cityNamePressed(_ sender: UIButton) {
+        autocompleteClicked()
+    }
+    
+    @IBAction func orgNamePressed(_ sender: UIButton) {
+        let vc = UIStoryboard().LoadOrganizationsScreen()
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func validationSuccessful() {
+        successValidation()
+        networkHit()
+    }
+    
+    func goBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension AddNonMasjidEventVC: SelectOrganizationProtocol {
+    
+    func selectOrg(item: MasjidItem) {
+        selectedPlace = item
+        txtOrganizationName.text = selectedPlace?.name
+    }
+}
+
+
+extension AddNonMasjidEventVC: GMSAutocompleteViewControllerDelegate {
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+                
+        networkHitCityFromLongLat(long: "\(place.coordinate.longitude)", lat: "\(place.coordinate.latitude)")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func autocompleteClicked() {
+        
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        
+        let fields: GMSPlaceField = GMSPlaceField(rawValue:  UInt64(UInt(GMSPlaceField.all.rawValue)))
+        
+        autocompleteController.placeFields = fields
+
+        autocompleteController.tableCellBackgroundColor = UIColor(red:0.03, green:0.27, blue:0.45, alpha:1.0)
+        autocompleteController.navigationController?.navigationBar.barTintColor =  UIColor(red:0.03, green:0.27, blue:0.45, alpha:1.0)
+
+        autocompleteController.primaryTextColor = .lightText
+        autocompleteController.secondaryTextColor = .lightText
+        autocompleteController.primaryTextHighlightColor = .white
+        
+        self.present(autocompleteController, animated: true, completion: nil)
+    }
+
+    // MARK:- Handle GMSAutocompleteViewController errors.
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        
+        print(error.localizedDescription)
+    }
+    
+}
+
+
+extension AddNonMasjidEventVC: ThreeDotProtocol {
+    
+    func faqBtnPressed() {
+        let vc = UIStoryboard().LoadFaqScreen()
+        vc.screen = "events"
+        vc.titleStr = "Events"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func feedbackBtnPressed() {
+        let vc = UIStoryboard().LoadFeedbackScreen()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func helpBtnPressed(){
+        guard let url = URL(string: helpURL) else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    func refreshBtnPressed() {
+        print("Do nothing")
+    }
+    
+    func shareBtnPressed() {
+        print("Do nothing")
+    }
+    
+    func addBtnPressed() {
+        print("No Nothing")
+    }
+    
+    func favouritesBtnPressed(){
+        print("No Nothing")
+    }
+    
+    func aboutUsBtnPressed(){
+        print("No Nothing")
+    }
+}
+
+extension AddNonMasjidEventVC {
+    
+    func networkHit(){
+                
+        HUD.show(.progress)
+        self.view.isUserInteractionEnabled = false
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let eventDateString = formatter.string(from: eventDate)
+
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm:ss"
+        let eventTimeString = timeFormatter.string(from: eventTime)
+
+        let description = tvDescription.text == "Enter your description here..." ? " " : tvDescription.text
+        let msgFromHost = tvMessageFromHost.text == "Enter your message here..." ? " " : tvMessageFromHost.text
+
+        let parameters = [
+            "city_id": "\(selectedCity.id)",
+            "city_name": "\(selectedCity.name)",
+            "city_latitude": "\(selectedCity.location.coordinate.latitude)",
+            "city_longitude": "\(selectedCity.location.coordinate.longitude)",
+            "place_id": "\(selectedPlace?.id ?? "")",
+            "place_name": "\(selectedPlace?.name ?? "")",
+            "place_latitude": "\(selectedPlace?.location.coordinate.latitude ?? 0.0)",
+            "place_longitude": "\(selectedPlace?.location.coordinate.longitude ?? 0.0)",
+            "place_address": "\(selectedPlace?.address ?? "")",
+            "title": "\(txtTitle.text ?? "")",
+            "description": "\(description ?? " ")",
+            "email": "\(txtEmail.text ?? "")",
+            "address": "\(txtAddress.text ?? "")",
+            "contact":"\(txtPhoneNumber.text ?? "")",
+            "date": "\(eventDateString)",
+            "time": "\(eventTimeString)",
+            "link": "\(txtWebsite.text ?? "")",
+            "message": "\(msgFromHost ?? " ")"
+        ]
+        
+        print(parameters)
+        
+//        let headers = ["Authorization": "Bearer \(myToken)"]
+        
+        if let imageData = imageData{
+//            if UserDefaults.standard.bool(forKey: "isLoggedIn")==true{
+                APIRequestUtil.AddNonMasjidEvent(parameters: parameters, headers: httpHeaders, imageData: imageData, fileName: "\(txtPhoneNumber.text ?? "")image\(txtTitle.text ?? "")", completion: APIRequestCompleted)
+//            }else{
+//                APIRequestUtil.AddNonMasjidEvent(parameters: parameters, headers: [:], imageData: imageData, fileName: "\(txtPhoneNumber.text ?? "")image\(txtTitle.text ?? "")", completion: APIRequestCompleted)
+//            }
+        }else{
+//            if UserDefaults.standard.bool(forKey: "isLoggedIn")==true{
+                APIRequestUtil.AddNonMasjidEventWithoutImage(parameters: parameters, headers: httpHeaders, completion: APIRequestCompleted)
+//            }else{
+//                APIRequestUtil.AddNonMasjidEventWithoutImage(parameters: parameters, headers: [:], completion: APIRequestCompleted)
+//            }
+        }
+    }
+    
+    fileprivate func APIRequestCompleted(response: Any?, error: Error?) {
+        
+        if let response = response{
+            self.view.isUserInteractionEnabled = true
+            HUD.hide()
+            let json = JSON(response)
+            print(json)
+            
+            let dic = json.dictionary
+            let firstResponseKey = dic?.first?.key
+            
+            if firstResponseKey == "message"{
+
+                let vc = UIStoryboard().LoadVerificationSuccessScreen()
+                vc.delegate = self
+                vc.text = "Dear User, Your request for the event has been submitted successfully. You can verify your event at  Event verification.\nFor any Query/information, please contact:\n events@allmasajid.com."
+                vc.modalPresentationStyle = .overFullScreen
+                self.parent?.present(vc, animated: false, completion: nil)
+            }
+            
+        }else{
+            HUD.hide()
+            self.view.isUserInteractionEnabled = true
+            HUD.flash(.labeledError(title: "Message", subtitle: "Network Faliure!"), delay: 0.7)
+        }
+    }
+}
+
+extension AddNonMasjidEventVC {
+    
+    func networkHitGetCity(city: String){
+        HUD.show(.progress)
+        
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?key=\(Secrets.googleMapsAPIKey)&components=administrative_area:\(city)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        APIRequestUtil.GetGoogleCityName(myURL: url, completion: APIRequestCityCompleted)
+    }
+    
+    fileprivate func APIRequestCityCompleted(response: Any?, error: Error?) {
+        
+        if let response = response{
+            self.view.isUserInteractionEnabled = true
+            HUD.hide()
+            let json = JSON(response)
+            print(json)
+            let results = json["results"].arrayValue
+            if results.count > 0 {
+                let address_components = results[0]["address_components"].arrayValue
+                
+                var cityFound = false
+                if address_components.count > 0 {
+                    for i in 0..<address_components.count {
+                        let types = address_components[i]["types"].arrayValue
+                        if types.contains("administrative_area_level_2"){
+                            cityFound = true
+                            selectedCity.name = address_components[i]["long_name"].stringValue
+                            self.txtCityName.text = selectedCity.name
+                            break
+                        }
+                    }
+                    
+                    if cityFound != true {
+                        selectedCity.name = address_components[0]["long_name"].stringValue
+                        self.txtCityName.text = selectedCity.name
+                    }
+                }
+                
+                
+                let geometry = results[0]["geometry"]
+                let location = geometry["location"]
+                let myLoc = CLLocation(latitude: location["lat"].double ?? 0, longitude: location["lng"].double ?? 0)
+                selectedCity.location = myLoc
+                selectedCity.id = results[0]["place_id"].stringValue
+            }
+            
+        }else{
+            HUD.hide()
+            self.view.isUserInteractionEnabled = true
+            HUD.flash(.labeledError(title: "Message", subtitle: "Network Faliure!"), delay: 0.7)
+        }
+    }
+}
+
+
+extension AddNonMasjidEventVC {
+    
+    func networkHitCityFromLongLat(long: String, lat: String){
+        HUD.show(.progress)
+        
+        APIRequestUtil.GetCityNameFromLongLat(long: long, lat: lat, completion: APIRequestCityFromLongLatCompleted)
+    }
+    
+    fileprivate func APIRequestCityFromLongLatCompleted(response: Any?, error: Error?) {
+        
+        if let response = response{
+            self.view.isUserInteractionEnabled = true
+            HUD.hide()
+            let json = JSON(response)
+            print(json)
+            
+            let results = json["results"].arrayValue
+            if results.count > 0 {
+                let address_components = results[0]["address_components"].arrayValue
+                
+                if address_components.count > 0 {
+                    for i in 0..<address_components.count {
+                        let types = address_components[i]["types"].arrayValue
+                        if types.contains("administrative_area_level_2"){
+                            self.networkHitGetCity(city: address_components[i]["long_name"].stringValue)
+                            break
+                        }
+                    }
+                    
+                    if selectedCity.name == "" {
+                        self.networkHitGetCity(city: address_components[0]["long_name"].stringValue)
+                    }
+                }
+            }
+            
+        }else{
+            HUD.hide()
+            self.view.isUserInteractionEnabled = true
+            HUD.flash(.labeledError(title: "Message", subtitle: "Network Faliure!"), delay: 0.7)
+        }
+    }
+}
+
+extension AddNonMasjidEventVC{
+    
+    func setupInitials(){
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        footerView.addGestureRecognizer(tap)
+        
+        self.btnUpload.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.btnUpload.layer.borderWidth = 1.0
+        
+        tvDescription.delegate = self
+        tvMessageFromHost.delegate = self
+        
+        txtEmail.text = userEmail
+        
+        tvDescription.text = "Enter your description here..."
+        tvDescription.textColor = UIColor.lightGray
+        
+        tvMessageFromHost.text = "Enter your message here..."
+        tvMessageFromHost.textColor = UIColor.lightGray
+        
+        imageStatusLabel.isHidden = true
+        
+        self.hideKeyboardWhenTappedAround()
+        self.pickerController.delegate = self
+        self.pickerController.allowsEditing = true
+        self.pickerController.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        guard let url = URL(string: allMWebURL) else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    func setupValidator(){
+        validator.registerField(txtTitle, rules: [RequiredRule()])
+        validator.registerField(txtEmail, rules: [RequiredRule()])
+        validator.registerField(txtDate, rules: [RequiredRule()])
+        validator.registerField(txtTime, rules: [RequiredRule()])
+        validator.registerField(txtAddress, rules: [RequiredRule()])
+        validator.registerField(txtWebsite, rules: [RequiredRule()])
+        validator.registerField(txtPhoneNumber, rules: [RequiredRule()])
+        validator.registerField(txtOrganizationName, rules: [RequiredRule()])
+        validator.registerField(txtCityName, rules: [RequiredRule()])
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        for (field, _) in errors {
+            if let field = field as? UITextField {
+                field.layer.borderColor = UIColor.red.cgColor
+                field.layer.borderWidth = 1.0
+            field.text = ""
+                field.attributedPlaceholder = NSAttributedString(string: "\(field.placeholder ?? "") Required *",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            }
+        }
+        HUD.hide()
+    }
+    
+    func successValidation(){
+        
+        txtTitle.layer.borderColor = UIColor.lightGray.cgColor
+        txtTitle.layer.borderWidth = 0.25
+        
+        txtOrganizationName.layer.borderColor = UIColor.lightGray.cgColor
+        txtOrganizationName.layer.borderWidth = 0.25
+        
+        txtCityName.layer.borderColor = UIColor.lightGray.cgColor
+        txtCityName.layer.borderWidth = 0.25
+        
+        txtDate.layer.borderColor = UIColor.lightGray.cgColor
+        txtDate.layer.borderWidth = 0.25
+        
+        txtTime.layer.borderColor = UIColor.lightGray.cgColor
+        txtTime.layer.borderWidth = 0.25
+        
+        txtAddress.layer.borderColor = UIColor.lightGray.cgColor
+        txtAddress.layer.borderWidth = 0.25
+        
+        txtPhoneNumber.layer.borderColor = UIColor.lightGray.cgColor
+        txtPhoneNumber.layer.borderWidth = 0.25
+        
+        txtWebsite.layer.borderColor = UIColor.lightGray.cgColor
+        txtWebsite.layer.borderWidth = 0.25
+        
+        txtEmail.layer.borderColor = UIColor.lightGray.cgColor
+        txtEmail.layer.borderWidth = 0.25
+        
+        tvMessageFromHost.layer.borderColor = UIColor.lightGray.cgColor
+        tvMessageFromHost.layer.borderWidth = 0.25
+        
+        tvDescription.layer.borderColor = UIColor.lightGray.cgColor
+        tvDescription.layer.borderWidth = 0.25
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            
+            if textView == tvMessageFromHost{
+                textView.text = "Enter your message here..."
+            }else{
+                textView.text = "Enter your description here..."
+            }
+            
+            textView.textColor = UIColor.lightGray
+        }
+    }
+}
+
+extension AddNonMasjidEventVC {
+    func imageBtn() {
+        let Alert = UIAlertController(title: "Attach Image", message: "", preferredStyle: UIAlertController.Style.alert)
+
+        let cameraAction = UIAlertAction(title: "Camera", style: .default){
+            UIAlertAction in
+         self.takePicture(x: .camera)
+        }
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default){
+            UIAlertAction in
+         self.takePicture(x: .photoLibrary)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
+            UIAlertAction in
+        }
+
+        Alert.addAction(cameraAction)
+        Alert.addAction(galleryAction)
+        Alert.addAction(cancelAction)
+        
+        UIApplication.shared.keyWindow?.rootViewController?.present(Alert, animated: true, completion: nil)
+    }
+    
+    func takePicture(x : UIImagePickerController.SourceType){
+
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = x
+        image.allowsEditing = true
+
+        UIApplication.shared.keyWindow?.rootViewController?.present(image, animated: true){
+
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
+        
+        if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            imageAttachment = originalImage
+        }else if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            imageAttachment = editedImage
+        }
+
+        if let myImage = imageAttachment {
+
+            imageData = myImage.jpegData(compressionQuality: 0.5)
+            imageStatusLabel.isHidden = false
+            flyerUploadLBL.text = "Flyer Uploaded"
+        }
+    }
+}
+
+extension AddNonMasjidEventVC {
+    
+    func showDatePicker(){
+        datePicker.datePickerMode = .date
+        timePicker.datePickerMode = .time
+        
+        if #available(iOS 14.0, *){
+            datePicker.preferredDatePickerStyle = .wheels
+            timePicker.preferredDatePickerStyle = .wheels
+        }
+        
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+    
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donedatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+    
+        txtDate.inputAccessoryView = toolbar
+        txtDate.inputView = datePicker
+    
+        let toolbarTime = UIToolbar();
+        toolbarTime.sizeToFit()
+        let doneTimeButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donetimePicker))
+        let spaceTimeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelTimeButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(canceltimePicker))
+        toolbarTime.setItems([doneTimeButton,spaceTimeButton,cancelTimeButton], animated: false)
+        
+        txtTime.inputAccessoryView = toolbarTime
+        txtTime.inputView = timePicker
+    }
+    
+    @objc func donedatePicker(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        eventDate = datePicker.date
+        txtDate.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+    }
+    
+    @objc func donetimePicker(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        txtTime.text = formatter.string(from: timePicker.date)
+        eventTime = timePicker.date
+        self.view.endEditing(true)
+    }
+    
+    @objc func canceltimePicker(){
+        self.view.endEditing(true)
+    }
+}

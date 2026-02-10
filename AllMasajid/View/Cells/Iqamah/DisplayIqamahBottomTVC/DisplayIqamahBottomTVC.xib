@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PT_Sans-Web-Regular.ttf">
+            <string>PTSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="DisplayIqamahBottomTVC" customModule="AllMasajid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Din-dA-eqN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday Prayers (Khutbah times)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Iz-4b-0n3">
+                                <rect key="frame" x="10" y="10" width="300" height="16"/>
+                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="121-Kx-IK5">
+                                <rect key="frame" x="10" y="36" width="300" height="16"/>
+                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066118061539999995" green="0.02459695563" blue="0.24379527570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="121-Kx-IK5" firstAttribute="leading" secondItem="Din-dA-eqN" secondAttribute="leading" constant="10" id="1qr-6V-cc3"/>
+                            <constraint firstItem="121-Kx-IK5" firstAttribute="top" secondItem="2Iz-4b-0n3" secondAttribute="bottom" constant="10" id="GbT-TW-9IW"/>
+                            <constraint firstItem="2Iz-4b-0n3" firstAttribute="top" secondItem="Din-dA-eqN" secondAttribute="top" constant="10" id="Naf-P2-fN6"/>
+                            <constraint firstAttribute="trailing" secondItem="2Iz-4b-0n3" secondAttribute="trailing" constant="10" id="YKF-Au-blX"/>
+                            <constraint firstAttribute="trailing" secondItem="121-Kx-IK5" secondAttribute="trailing" constant="10" id="y9p-KB-bZd"/>
+                            <constraint firstItem="2Iz-4b-0n3" firstAttribute="leading" secondItem="Din-dA-eqN" secondAttribute="leading" constant="10" id="yS7-Lp-Lwy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Din-dA-eqN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9U6-Jc-L9Z"/>
+                    <constraint firstAttribute="bottom" secondItem="Din-dA-eqN" secondAttribute="bottom" id="TKB-gS-FxU"/>
+                    <constraint firstAttribute="trailing" secondItem="Din-dA-eqN" secondAttribute="trailing" id="ojg-ww-o8Z"/>
+                    <constraint firstItem="Din-dA-eqN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wt6-mV-bl0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textLBL" destination="121-Kx-IK5" id="Ttp-f8-JNF"/>
+            </connections>
+            <point key="canvasLocation" x="95.652173913043484" y="112.83482142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
